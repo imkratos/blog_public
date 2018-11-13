@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>java on Even - A super concise theme for Hugo</title>
-    <link>http://localhost:1313/categories/java/</link>
-    <description>Recent content in java on Even - A super concise theme for Hugo</description>
+    <title>java on 代码狗 - 还是写代码能让人幸福</title>
+    <link>https://zhishuo.info/categories/java/</link>
+    <description>Recent content in java on 代码狗 - 还是写代码能让人幸福</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh-cn</language>
     <lastBuildDate>Fri, 09 Dec 2016 16:16:30 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/categories/java/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zhishuo.info/categories/java/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>JDK1.8源码之ConcurrentHashMap</title>
-      <link>http://localhost:1313/post/jdk1.8%E6%BA%90%E7%A0%81%E4%B9%8Bconcurrenthashmap/</link>
+      <link>https://zhishuo.info/post/blog_hugo/jdk1.8%E6%BA%90%E7%A0%81%E4%B9%8Bconcurrenthashmap/</link>
       <pubDate>Fri, 09 Dec 2016 16:16:30 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/jdk1.8%E6%BA%90%E7%A0%81%E4%B9%8Bconcurrenthashmap/</guid>
+      <guid>https://zhishuo.info/post/blog_hugo/jdk1.8%E6%BA%90%E7%A0%81%E4%B9%8Bconcurrenthashmap/</guid>
       <description>什么是ConcurrentHashMap 以下观点都是建立在JDK1.8之上。 我们知道HashMap是非线程安全的，所以JDK给我们提供了几种</description>
     </item>
     
     <item>
       <title>JDK源码之LinkedHashMap</title>
-      <link>http://localhost:1313/post/jdk%E6%BA%90%E7%A0%81%E4%B9%8Blinkedhashmap/</link>
+      <link>https://zhishuo.info/post/blog_hugo/jdk%E6%BA%90%E7%A0%81%E4%B9%8Blinkedhashmap/</link>
       <pubDate>Sun, 04 Dec 2016 13:18:58 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/jdk%E6%BA%90%E7%A0%81%E4%B9%8Blinkedhashmap/</guid>
+      <guid>https://zhishuo.info/post/blog_hugo/jdk%E6%BA%90%E7%A0%81%E4%B9%8Blinkedhashmap/</guid>
       <description>LinkedHashMap使用场景 我们都知道平常使用的HashMap是存放无顺序的，但当我们需要有顺序的HashMap的时候呢？所以JDK提</description>
     </item>
     
     <item>
       <title>JDK源码之ThreadLocal</title>
-      <link>http://localhost:1313/post/jdk%E6%BA%90%E7%A0%81%E4%B9%8Bthreadlocal/</link>
+      <link>https://zhishuo.info/post/blog_hugo/jdk%E6%BA%90%E7%A0%81%E4%B9%8Bthreadlocal/</link>
       <pubDate>Sat, 26 Nov 2016 21:07:05 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/jdk%E6%BA%90%E7%A0%81%E4%B9%8Bthreadlocal/</guid>
+      <guid>https://zhishuo.info/post/blog_hugo/jdk%E6%BA%90%E7%A0%81%E4%B9%8Bthreadlocal/</guid>
       <description>&lt;h4 id=&#34;threadlocal介绍&#34;&gt;ThreadLocal介绍&lt;/h4&gt;
 
 &lt;p&gt;一般我们都是如果发现有资源需要共享的时候，在多个线程之间要互相共享数据的时候，我们可以使用&lt;code&gt;ThreadLocal&lt;/code&gt;来实现。因为存入&lt;code&gt;ThreadLocal&lt;/code&gt;中的数据是和每个线程绑定的，所以不会存在数据竞争的问题了。&lt;/p&gt;
@@ -113,10 +113,10 @@
     
     <item>
       <title>JDK源码之HashMap</title>
-      <link>http://localhost:1313/post/jdk%E6%BA%90%E7%A0%81%E4%B9%8Bhashmap/</link>
+      <link>https://zhishuo.info/post/blog_hugo/jdk%E6%BA%90%E7%A0%81%E4%B9%8Bhashmap/</link>
       <pubDate>Sat, 12 Nov 2016 15:39:10 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/jdk%E6%BA%90%E7%A0%81%E4%B9%8Bhashmap/</guid>
+      <guid>https://zhishuo.info/post/blog_hugo/jdk%E6%BA%90%E7%A0%81%E4%B9%8Bhashmap/</guid>
       <description>&lt;h4 id=&#34;什么是hashmap&#34;&gt;什么是HashMap&lt;/h4&gt;
 
 &lt;p&gt;HashMap是一个可以提供O(1)时间复杂度的数据结构，由数组和链表数据结构组成。在对存入的key进行hash之后，然后用hash值在数组上确定一个位置，把value对象以Node节点形式放入到数组的链表当中。&lt;/p&gt;
@@ -174,10 +174,10 @@
     
     <item>
       <title>JDK源码之CopyOnWriteArrayList</title>
-      <link>http://localhost:1313/post/jdk%E6%BA%90%E7%A0%81%E4%B9%8Bcopyonwritearraylist/</link>
+      <link>https://zhishuo.info/post/blog_hugo/jdk%E6%BA%90%E7%A0%81%E4%B9%8Bcopyonwritearraylist/</link>
       <pubDate>Thu, 10 Nov 2016 23:14:52 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/jdk%E6%BA%90%E7%A0%81%E4%B9%8Bcopyonwritearraylist/</guid>
+      <guid>https://zhishuo.info/post/blog_hugo/jdk%E6%BA%90%E7%A0%81%E4%B9%8Bcopyonwritearraylist/</guid>
       <description>&lt;h4 id=&#34;什么是copyonwritearraylist&#34;&gt;什么是CopyOnWriteArrayList&lt;/h4&gt;
 
 &lt;p&gt;CopyOnWriteArrayList是一个线程安全的List，和它相同的还有这几个,Vectory,SynchronizedList。
@@ -192,11 +192,82 @@
     
     <item>
       <title>mac下使用springli创建springboot应用</title>
-      <link>http://localhost:1313/post/mac%E4%B8%8B%E4%BD%BF%E7%94%A8springli%E5%88%9B%E5%BB%BAspringboot%E5%BA%94%E7%94%A8/</link>
+      <link>https://zhishuo.info/post/blog_hugo/mac%E4%B8%8B%E4%BD%BF%E7%94%A8springli%E5%88%9B%E5%BB%BAspringboot%E5%BA%94%E7%94%A8/</link>
       <pubDate>Fri, 04 Nov 2016 15:53:51 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/mac%E4%B8%8B%E4%BD%BF%E7%94%A8springli%E5%88%9B%E5%BB%BAspringboot%E5%BA%94%E7%94%A8/</guid>
+      <guid>https://zhishuo.info/post/blog_hugo/mac%E4%B8%8B%E4%BD%BF%E7%94%A8springli%E5%88%9B%E5%BB%BAspringboot%E5%BA%94%E7%94%A8/</guid>
       <description>环境准备 生成springboot有以下几种方式 1. maven 2. gradle 3. springli 4. spring官网可以点击生成脚手架 spring官网介绍说springli是最快的</description>
+    </item>
+    
+    <item>
+      <title>读spring源码深度解析(二)</title>
+      <link>https://zhishuo.info/post/blog_hugo/%E8%AF%BBspring%E6%BA%90%E7%A0%81%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90%E4%BA%8C/</link>
+      <pubDate>Wed, 09 Mar 2016 17:16:21 +0000</pubDate>
+      
+      <guid>https://zhishuo.info/post/blog_hugo/%E8%AF%BBspring%E6%BA%90%E7%A0%81%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90%E4%BA%8C/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;&lt;em&gt;不明白&lt;/em&gt;&lt;/strong&gt;
+&lt;code&gt;DefaultListableBeanFactory.java&lt;/code&gt;中使用了&lt;code&gt;AccessController.doPrivileged()&lt;/code&gt;方法，个人理解此方法好像是以当前上下文执行一些代码。
+&lt;code&gt;javaUtilOptionalClass&lt;/code&gt;这个属性，是用了JDK8的&lt;code&gt;java.util.Optional&lt;/code&gt;,此类是用来避免在Java中出现各种null的问题,但不知道为什么是写在了静态代码块中，而且是以动态加载的方式来加载的。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;初始类&lt;/em&gt;&lt;/strong&gt;
+从&lt;code&gt;DefaultListableBeanFactory.java&lt;/code&gt;类的getBean()中，开始对整个工厂类进分析。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://ogflhfadi.bkt.clouddn.com/DefaultListableBeanFactory.png&#34; alt=&#34;类的关系调用图&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;静态导入，如果你多次用到某个工具类的静态方法，可以使用静态导入，这样使代码更整洁美观。
+&lt;code&gt;SimpleAliasRegistry.java&lt;/code&gt;这个类实现了对Alias的一些操作。
+&lt;code&gt;BeanFactory.java&lt;/code&gt;接口定义一些对Bean的基本操作。
+&lt;code&gt;DefaultSingletonBeanRegistry.java&lt;/code&gt;对spring对Bean的一些操作做了各种封装，创建，消毁，依赖等。
+&lt;code&gt;AbstractAutowireCapableBeanFactory.java&lt;/code&gt;对&lt;code&gt;AutowireCapableBeanFactory&lt;/code&gt;定义的方法进行了实现，此类
+&lt;code&gt;XmlBeanDefinitionReader.java&lt;/code&gt;实现了用xml解析资源文件，并且实现了&lt;code&gt;DefaultListableBeanFactory.java&lt;/code&gt;类&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>阅读ActiveMQ源码总结</title>
+      <link>https://zhishuo.info/post/blog_hugo/%E9%98%85%E8%AF%BBactivemq%E6%BA%90%E7%A0%81%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Thu, 07 Jan 2016 22:06:48 +0000</pubDate>
+      
+      <guid>https://zhishuo.info/post/blog_hugo/%E9%98%85%E8%AF%BBactivemq%E6%BA%90%E7%A0%81%E6%80%BB%E7%BB%93/</guid>
+      <description>&lt;h3 id=&#34;准备工作&#34;&gt;准备工作&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;下载源码&lt;code&gt;git clone https://github.com/apache/activemq.git&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;使用maven编译源码并且下载依赖&lt;code&gt;mvn clean install&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;导入到开发工具eclipse&lt;code&gt;mvn eclipse:eclipse&lt;/code&gt; 或者idea &lt;code&gt;mvn idea:idea&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;默认会去maven中央仓库下载jar包，如果下载速度慢可以翻墙或者改成开源中国的镜像仓库
+&lt;code&gt;xml
+&amp;lt;mirrors&amp;gt;
+&amp;lt;mirror&amp;gt;
+  &amp;lt;id&amp;gt;CN&amp;lt;/id&amp;gt;
+  &amp;lt;name&amp;gt;OSChina Central&amp;lt;/name&amp;gt;
+  &amp;lt;url&amp;gt;http://maven.oschina.net/content/groups/public/&amp;lt;/url&amp;gt;
+  &amp;lt;mirrorOf&amp;gt;central&amp;lt;/mirrorOf&amp;gt;
+&amp;lt;/mirror&amp;gt;
+&amp;lt;/mirrors&amp;gt;
+&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>读activeMQ源码(一)</title>
+      <link>https://zhishuo.info/post/blog_hugo/%E8%AF%BBactivemq%E6%BA%90%E7%A0%81%E4%B8%80/</link>
+      <pubDate>Wed, 09 Dec 2015 00:54:49 +0000</pubDate>
+      
+      <guid>https://zhishuo.info/post/blog_hugo/%E8%AF%BBactivemq%E6%BA%90%E7%A0%81%E4%B8%80/</guid>
+      <description>最近的学习到了消息的阶段，查了下网上的资料，并没有很多具体介绍某一个消息中间件的源码是如何实现，帮自己下了源码想分析下去，希望能坚持。 源码G</description>
+    </item>
+    
+    <item>
+      <title>读spring源码深度解析</title>
+      <link>https://zhishuo.info/post/blog_hugo/%E8%AF%BBspring%E6%BA%90%E7%A0%81%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90/</link>
+      <pubDate>Thu, 12 Nov 2015 11:35:44 +0000</pubDate>
+      
+      <guid>https://zhishuo.info/post/blog_hugo/%E8%AF%BBspring%E6%BA%90%E7%A0%81%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90/</guid>
+      <description>工作也有几年了，以前也尝试过想要读spring源码，但由于前几年没有参考资料，所以很难去理解，最近发现一本spring源码深度解析，怀着试试</description>
     </item>
     
   </channel>

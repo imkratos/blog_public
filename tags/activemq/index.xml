@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>activemq on 代码狗 - 还是写代码能让人幸福</title>
+    <link>https://zhishuo.info/tags/activemq/</link>
+    <description>Recent content in activemq on 代码狗 - 还是写代码能让人幸福</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 09 Dec 2015 00:54:49 +0000</lastBuildDate>
+    
+	<atom:link href="https://zhishuo.info/tags/activemq/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>读activeMQ源码(一)</title>
+      <link>https://zhishuo.info/post/blog_hugo/%E8%AF%BBactivemq%E6%BA%90%E7%A0%81%E4%B8%80/</link>
+      <pubDate>Wed, 09 Dec 2015 00:54:49 +0000</pubDate>
+      
+      <guid>https://zhishuo.info/post/blog_hugo/%E8%AF%BBactivemq%E6%BA%90%E7%A0%81%E4%B8%80/</guid>
+      <description>最近的学习到了消息的阶段，查了下网上的资料，并没有很多具体介绍某一个消息中间件的源码是如何实现，帮自己下了源码想分析下去，希望能坚持。 源码G</description>
+    </item>
+    
+  </channel>
+</rss>

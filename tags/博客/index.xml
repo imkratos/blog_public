@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>博客 on 代码狗 - 还是写代码能让人幸福</title>
+    <link>https://zhishuo.info/tags/%E5%8D%9A%E5%AE%A2/</link>
+    <description>Recent content in 博客 on 代码狗 - 还是写代码能让人幸福</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 31 May 2014 18:14:02 +0000</lastBuildDate>
+    
+	<atom:link href="https://zhishuo.info/tags/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>我为什么开始写博客</title>
+      <link>https://zhishuo.info/post/blog_hugo/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BC%80%E5%A7%8B%E5%86%99%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Sat, 31 May 2014 18:14:02 +0000</pubDate>
+      
+      <guid>https://zhishuo.info/post/blog_hugo/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BC%80%E5%A7%8B%E5%86%99%E5%8D%9A%E5%AE%A2/</guid>
+      <description>最近参加了几场印象笔记的活动，听大家分享了一些自己坚持做的事，由于最近自己也在整理自己琐碎的事情，感觉虽然自己在技术上一直在积累但那都是自己</description>
+    </item>
+    
+  </channel>
+</rss>

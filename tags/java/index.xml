@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>java on Even - A super concise theme for Hugo</title>
-    <link>http://localhost:1313/tags/java/</link>
-    <description>Recent content in java on Even - A super concise theme for Hugo</description>
+    <title>java on 代码狗 - 还是写代码能让人幸福</title>
+    <link>https://zhishuo.info/tags/java/</link>
+    <description>Recent content in java on 代码狗 - 还是写代码能让人幸福</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh-cn</language>
     <lastBuildDate>Sat, 12 Nov 2016 15:39:10 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/java/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zhishuo.info/tags/java/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>JDK源码之HashMap</title>
-      <link>http://localhost:1313/post/jdk%E6%BA%90%E7%A0%81%E4%B9%8Bhashmap/</link>
+      <link>https://zhishuo.info/post/blog_hugo/jdk%E6%BA%90%E7%A0%81%E4%B9%8Bhashmap/</link>
       <pubDate>Sat, 12 Nov 2016 15:39:10 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/jdk%E6%BA%90%E7%A0%81%E4%B9%8Bhashmap/</guid>
+      <guid>https://zhishuo.info/post/blog_hugo/jdk%E6%BA%90%E7%A0%81%E4%B9%8Bhashmap/</guid>
       <description>&lt;h4 id=&#34;什么是hashmap&#34;&gt;什么是HashMap&lt;/h4&gt;
 
 &lt;p&gt;HashMap是一个可以提供O(1)时间复杂度的数据结构，由数组和链表数据结构组成。在对存入的key进行hash之后，然后用hash值在数组上确定一个位置，把value对象以Node节点形式放入到数组的链表当中。&lt;/p&gt;
@@ -74,10 +74,10 @@
     
     <item>
       <title>JDK源码之CopyOnWriteArrayList</title>
-      <link>http://localhost:1313/post/jdk%E6%BA%90%E7%A0%81%E4%B9%8Bcopyonwritearraylist/</link>
+      <link>https://zhishuo.info/post/blog_hugo/jdk%E6%BA%90%E7%A0%81%E4%B9%8Bcopyonwritearraylist/</link>
       <pubDate>Thu, 10 Nov 2016 23:14:52 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/jdk%E6%BA%90%E7%A0%81%E4%B9%8Bcopyonwritearraylist/</guid>
+      <guid>https://zhishuo.info/post/blog_hugo/jdk%E6%BA%90%E7%A0%81%E4%B9%8Bcopyonwritearraylist/</guid>
       <description>&lt;h4 id=&#34;什么是copyonwritearraylist&#34;&gt;什么是CopyOnWriteArrayList&lt;/h4&gt;
 
 &lt;p&gt;CopyOnWriteArrayList是一个线程安全的List，和它相同的还有这几个,Vectory,SynchronizedList。
@@ -92,11 +92,48 @@
     
     <item>
       <title>mac下使用springli创建springboot应用</title>
-      <link>http://localhost:1313/post/mac%E4%B8%8B%E4%BD%BF%E7%94%A8springli%E5%88%9B%E5%BB%BAspringboot%E5%BA%94%E7%94%A8/</link>
+      <link>https://zhishuo.info/post/blog_hugo/mac%E4%B8%8B%E4%BD%BF%E7%94%A8springli%E5%88%9B%E5%BB%BAspringboot%E5%BA%94%E7%94%A8/</link>
       <pubDate>Fri, 04 Nov 2016 15:53:51 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/mac%E4%B8%8B%E4%BD%BF%E7%94%A8springli%E5%88%9B%E5%BB%BAspringboot%E5%BA%94%E7%94%A8/</guid>
+      <guid>https://zhishuo.info/post/blog_hugo/mac%E4%B8%8B%E4%BD%BF%E7%94%A8springli%E5%88%9B%E5%BB%BAspringboot%E5%BA%94%E7%94%A8/</guid>
       <description>环境准备 生成springboot有以下几种方式 1. maven 2. gradle 3. springli 4. spring官网可以点击生成脚手架 spring官网介绍说springli是最快的</description>
+    </item>
+    
+    <item>
+      <title>阅读ActiveMQ源码总结</title>
+      <link>https://zhishuo.info/post/blog_hugo/%E9%98%85%E8%AF%BBactivemq%E6%BA%90%E7%A0%81%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Thu, 07 Jan 2016 22:06:48 +0000</pubDate>
+      
+      <guid>https://zhishuo.info/post/blog_hugo/%E9%98%85%E8%AF%BBactivemq%E6%BA%90%E7%A0%81%E6%80%BB%E7%BB%93/</guid>
+      <description>&lt;h3 id=&#34;准备工作&#34;&gt;准备工作&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;下载源码&lt;code&gt;git clone https://github.com/apache/activemq.git&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;使用maven编译源码并且下载依赖&lt;code&gt;mvn clean install&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;导入到开发工具eclipse&lt;code&gt;mvn eclipse:eclipse&lt;/code&gt; 或者idea &lt;code&gt;mvn idea:idea&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;默认会去maven中央仓库下载jar包，如果下载速度慢可以翻墙或者改成开源中国的镜像仓库
+&lt;code&gt;xml
+&amp;lt;mirrors&amp;gt;
+&amp;lt;mirror&amp;gt;
+  &amp;lt;id&amp;gt;CN&amp;lt;/id&amp;gt;
+  &amp;lt;name&amp;gt;OSChina Central&amp;lt;/name&amp;gt;
+  &amp;lt;url&amp;gt;http://maven.oschina.net/content/groups/public/&amp;lt;/url&amp;gt;
+  &amp;lt;mirrorOf&amp;gt;central&amp;lt;/mirrorOf&amp;gt;
+&amp;lt;/mirror&amp;gt;
+&amp;lt;/mirrors&amp;gt;
+&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>读activeMQ源码(一)</title>
+      <link>https://zhishuo.info/post/blog_hugo/%E8%AF%BBactivemq%E6%BA%90%E7%A0%81%E4%B8%80/</link>
+      <pubDate>Wed, 09 Dec 2015 00:54:49 +0000</pubDate>
+      
+      <guid>https://zhishuo.info/post/blog_hugo/%E8%AF%BBactivemq%E6%BA%90%E7%A0%81%E4%B8%80/</guid>
+      <description>最近的学习到了消息的阶段，查了下网上的资料，并没有很多具体介绍某一个消息中间件的源码是如何实现，帮自己下了源码想分析下去，希望能坚持。 源码G</description>
     </item>
     
   </channel>

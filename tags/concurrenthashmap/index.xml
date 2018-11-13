@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ConcurrentHashMap on Even - A super concise theme for Hugo</title>
-    <link>http://localhost:1313/tags/concurrenthashmap/</link>
-    <description>Recent content in ConcurrentHashMap on Even - A super concise theme for Hugo</description>
+    <title>ConcurrentHashMap on 代码狗 - 还是写代码能让人幸福</title>
+    <link>https://zhishuo.info/tags/concurrenthashmap/</link>
+    <description>Recent content in ConcurrentHashMap on 代码狗 - 还是写代码能让人幸福</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh-cn</language>
     <lastBuildDate>Fri, 09 Dec 2016 16:16:30 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/concurrenthashmap/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zhishuo.info/tags/concurrenthashmap/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>JDK1.8源码之ConcurrentHashMap</title>
-      <link>http://localhost:1313/post/jdk1.8%E6%BA%90%E7%A0%81%E4%B9%8Bconcurrenthashmap/</link>
+      <link>https://zhishuo.info/post/blog_hugo/jdk1.8%E6%BA%90%E7%A0%81%E4%B9%8Bconcurrenthashmap/</link>
       <pubDate>Fri, 09 Dec 2016 16:16:30 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/jdk1.8%E6%BA%90%E7%A0%81%E4%B9%8Bconcurrenthashmap/</guid>
+      <guid>https://zhishuo.info/post/blog_hugo/jdk1.8%E6%BA%90%E7%A0%81%E4%B9%8Bconcurrenthashmap/</guid>
       <description>什么是ConcurrentHashMap 以下观点都是建立在JDK1.8之上。 我们知道HashMap是非线程安全的，所以JDK给我们提供了几种</description>
     </item>
     

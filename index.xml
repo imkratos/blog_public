@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Even - A super concise theme for Hugo</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on Even - A super concise theme for Hugo</description>
+    <title>代码狗 - 还是写代码能让人幸福</title>
+    <link>https://zhishuo.info/</link>
+    <description>Recent content on 代码狗 - 还是写代码能让人幸福</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh-cn</language>
     <lastBuildDate>Fri, 09 Dec 2016 16:16:30 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zhishuo.info/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>JDK1.8源码之ConcurrentHashMap</title>
-      <link>http://localhost:1313/post/jdk1.8%E6%BA%90%E7%A0%81%E4%B9%8Bconcurrenthashmap/</link>
+      <link>https://zhishuo.info/post/blog_hugo/jdk1.8%E6%BA%90%E7%A0%81%E4%B9%8Bconcurrenthashmap/</link>
       <pubDate>Fri, 09 Dec 2016 16:16:30 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/jdk1.8%E6%BA%90%E7%A0%81%E4%B9%8Bconcurrenthashmap/</guid>
+      <guid>https://zhishuo.info/post/blog_hugo/jdk1.8%E6%BA%90%E7%A0%81%E4%B9%8Bconcurrenthashmap/</guid>
       <description>什么是ConcurrentHashMap 以下观点都是建立在JDK1.8之上。 我们知道HashMap是非线程安全的，所以JDK给我们提供了几种</description>
     </item>
     
     <item>
       <title>JDK源码之LinkedHashMap</title>
-      <link>http://localhost:1313/post/jdk%E6%BA%90%E7%A0%81%E4%B9%8Blinkedhashmap/</link>
+      <link>https://zhishuo.info/post/blog_hugo/jdk%E6%BA%90%E7%A0%81%E4%B9%8Blinkedhashmap/</link>
       <pubDate>Sun, 04 Dec 2016 13:18:58 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/jdk%E6%BA%90%E7%A0%81%E4%B9%8Blinkedhashmap/</guid>
+      <guid>https://zhishuo.info/post/blog_hugo/jdk%E6%BA%90%E7%A0%81%E4%B9%8Blinkedhashmap/</guid>
       <description>LinkedHashMap使用场景 我们都知道平常使用的HashMap是存放无顺序的，但当我们需要有顺序的HashMap的时候呢？所以JDK提</description>
     </item>
     
     <item>
       <title>JDK源码之ThreadLocal</title>
-      <link>http://localhost:1313/post/jdk%E6%BA%90%E7%A0%81%E4%B9%8Bthreadlocal/</link>
+      <link>https://zhishuo.info/post/blog_hugo/jdk%E6%BA%90%E7%A0%81%E4%B9%8Bthreadlocal/</link>
       <pubDate>Sat, 26 Nov 2016 21:07:05 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/jdk%E6%BA%90%E7%A0%81%E4%B9%8Bthreadlocal/</guid>
+      <guid>https://zhishuo.info/post/blog_hugo/jdk%E6%BA%90%E7%A0%81%E4%B9%8Bthreadlocal/</guid>
       <description>&lt;h4 id=&#34;threadlocal介绍&#34;&gt;ThreadLocal介绍&lt;/h4&gt;
 
 &lt;p&gt;一般我们都是如果发现有资源需要共享的时候，在多个线程之间要互相共享数据的时候，我们可以使用&lt;code&gt;ThreadLocal&lt;/code&gt;来实现。因为存入&lt;code&gt;ThreadLocal&lt;/code&gt;中的数据是和每个线程绑定的，所以不会存在数据竞争的问题了。&lt;/p&gt;
@@ -113,10 +113,10 @@
     
     <item>
       <title>hexo博客主动推送到百度站长平台</title>
-      <link>http://localhost:1313/post/hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E5%8A%A8%E6%8E%A8%E9%80%81%E5%88%B0%E7%99%BE%E5%BA%A6%E7%AB%99%E9%95%BF%E5%B9%B3%E5%8F%B0/</link>
+      <link>https://zhishuo.info/post/blog_hugo/hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E5%8A%A8%E6%8E%A8%E9%80%81%E5%88%B0%E7%99%BE%E5%BA%A6%E7%AB%99%E9%95%BF%E5%B9%B3%E5%8F%B0/</link>
       <pubDate>Sat, 26 Nov 2016 17:19:09 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E5%8A%A8%E6%8E%A8%E9%80%81%E5%88%B0%E7%99%BE%E5%BA%A6%E7%AB%99%E9%95%BF%E5%B9%B3%E5%8F%B0/</guid>
+      <guid>https://zhishuo.info/post/blog_hugo/hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E5%8A%A8%E6%8E%A8%E9%80%81%E5%88%B0%E7%99%BE%E5%BA%A6%E7%AB%99%E9%95%BF%E5%B9%B3%E5%8F%B0/</guid>
       <description>&lt;h4 id=&#34;推送百度站长平台&#34;&gt;推送百度站长平台&lt;/h4&gt;
 
 &lt;p&gt;百度站长平台有几种方式提交自己的链接
@@ -131,10 +131,10 @@
     
     <item>
       <title>hexo博客next主题修改静态资源为CDN</title>
-      <link>http://localhost:1313/post/hexo%E5%8D%9A%E5%AE%A2next%E4%B8%BB%E9%A2%98%E4%BF%AE%E6%94%B9%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E4%B8%BAcdn/</link>
+      <link>https://zhishuo.info/post/blog_hugo/hexo%E5%8D%9A%E5%AE%A2next%E4%B8%BB%E9%A2%98%E4%BF%AE%E6%94%B9%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E4%B8%BAcdn/</link>
       <pubDate>Tue, 15 Nov 2016 23:55:21 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/hexo%E5%8D%9A%E5%AE%A2next%E4%B8%BB%E9%A2%98%E4%BF%AE%E6%94%B9%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E4%B8%BAcdn/</guid>
+      <guid>https://zhishuo.info/post/blog_hugo/hexo%E5%8D%9A%E5%AE%A2next%E4%B8%BB%E9%A2%98%E4%BF%AE%E6%94%B9%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E4%B8%BAcdn/</guid>
       <description>&lt;h2 id=&#34;问题&#34;&gt;问题&lt;/h2&gt;
 
 &lt;p&gt;博主最近看到博客打开速度非常慢，点开chrome的开发者工具查看是由于css,js,图片加载太慢，故&lt;code&gt;css,js&lt;/code&gt;换成了国内的cdn，图片换成了&lt;a href=&#34;http://www.qiniu.com/&#34;&gt;七牛云&lt;/a&gt;。
@@ -144,10 +144,10 @@
     
     <item>
       <title>JDK源码之HashMap</title>
-      <link>http://localhost:1313/post/jdk%E6%BA%90%E7%A0%81%E4%B9%8Bhashmap/</link>
+      <link>https://zhishuo.info/post/blog_hugo/jdk%E6%BA%90%E7%A0%81%E4%B9%8Bhashmap/</link>
       <pubDate>Sat, 12 Nov 2016 15:39:10 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/jdk%E6%BA%90%E7%A0%81%E4%B9%8Bhashmap/</guid>
+      <guid>https://zhishuo.info/post/blog_hugo/jdk%E6%BA%90%E7%A0%81%E4%B9%8Bhashmap/</guid>
       <description>&lt;h4 id=&#34;什么是hashmap&#34;&gt;什么是HashMap&lt;/h4&gt;
 
 &lt;p&gt;HashMap是一个可以提供O(1)时间复杂度的数据结构，由数组和链表数据结构组成。在对存入的key进行hash之后，然后用hash值在数组上确定一个位置，把value对象以Node节点形式放入到数组的链表当中。&lt;/p&gt;
@@ -205,10 +205,10 @@
     
     <item>
       <title>JDK源码之CopyOnWriteArrayList</title>
-      <link>http://localhost:1313/post/jdk%E6%BA%90%E7%A0%81%E4%B9%8Bcopyonwritearraylist/</link>
+      <link>https://zhishuo.info/post/blog_hugo/jdk%E6%BA%90%E7%A0%81%E4%B9%8Bcopyonwritearraylist/</link>
       <pubDate>Thu, 10 Nov 2016 23:14:52 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/jdk%E6%BA%90%E7%A0%81%E4%B9%8Bcopyonwritearraylist/</guid>
+      <guid>https://zhishuo.info/post/blog_hugo/jdk%E6%BA%90%E7%A0%81%E4%B9%8Bcopyonwritearraylist/</guid>
       <description>&lt;h4 id=&#34;什么是copyonwritearraylist&#34;&gt;什么是CopyOnWriteArrayList&lt;/h4&gt;
 
 &lt;p&gt;CopyOnWriteArrayList是一个线程安全的List，和它相同的还有这几个,Vectory,SynchronizedList。
@@ -223,44 +223,91 @@
     
     <item>
       <title>hexo next主题添加LeanCloud统计功能</title>
-      <link>http://localhost:1313/post/hexo-next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0leancloud%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD/</link>
+      <link>https://zhishuo.info/post/blog_hugo/hexo-next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0leancloud%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD/</link>
       <pubDate>Thu, 10 Nov 2016 20:51:47 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/hexo-next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0leancloud%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD/</guid>
+      <guid>https://zhishuo.info/post/blog_hugo/hexo-next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0leancloud%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD/</guid>
       <description>遇到的问题 网上能查到很多next主题添加LeanCloud主题的方法，但我看都是说在站点的_config.yml中添加 1 2 3 4 leancloud_visitors: enable: true app_id: appid app_key: key</description>
     </item>
     
     <item>
       <title>mac下使用springli创建springboot应用</title>
-      <link>http://localhost:1313/post/mac%E4%B8%8B%E4%BD%BF%E7%94%A8springli%E5%88%9B%E5%BB%BAspringboot%E5%BA%94%E7%94%A8/</link>
+      <link>https://zhishuo.info/post/blog_hugo/mac%E4%B8%8B%E4%BD%BF%E7%94%A8springli%E5%88%9B%E5%BB%BAspringboot%E5%BA%94%E7%94%A8/</link>
       <pubDate>Fri, 04 Nov 2016 15:53:51 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/mac%E4%B8%8B%E4%BD%BF%E7%94%A8springli%E5%88%9B%E5%BB%BAspringboot%E5%BA%94%E7%94%A8/</guid>
+      <guid>https://zhishuo.info/post/blog_hugo/mac%E4%B8%8B%E4%BD%BF%E7%94%A8springli%E5%88%9B%E5%BB%BAspringboot%E5%BA%94%E7%94%A8/</guid>
       <description>环境准备 生成springboot有以下几种方式 1. maven 2. gradle 3. springli 4. spring官网可以点击生成脚手架 spring官网介绍说springli是最快的</description>
     </item>
     
     <item>
       <title>使用hexo生成博客在github js css 404解决方案</title>
-      <link>http://localhost:1313/post/%E4%BD%BF%E7%94%A8hexo%E7%94%9F%E6%88%90%E5%8D%9A%E5%AE%A2%E5%9C%A8github-js-css-404%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
+      <link>https://zhishuo.info/post/blog_hugo/%E4%BD%BF%E7%94%A8hexo%E7%94%9F%E6%88%90%E5%8D%9A%E5%AE%A2%E5%9C%A8github-js-css-404%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
       <pubDate>Fri, 04 Nov 2016 13:32:58 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/%E4%BD%BF%E7%94%A8hexo%E7%94%9F%E6%88%90%E5%8D%9A%E5%AE%A2%E5%9C%A8github-js-css-404%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid>
+      <guid>https://zhishuo.info/post/blog_hugo/%E4%BD%BF%E7%94%A8hexo%E7%94%9F%E6%88%90%E5%8D%9A%E5%AE%A2%E5%9C%A8github-js-css-404%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid>
       <description>问题 博主最近又开始写博客了，发现使用hexo next 主题，上传到github上之后，所有的vendors文件夹下的资源访问404，博主查了一些资料</description>
     </item>
     
     <item>
-      <title></title>
-      <link>http://localhost:1313/post/archlinux%E5%AE%89%E8%A3%85%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>读spring源码深度解析(二)</title>
+      <link>https://zhishuo.info/post/blog_hugo/%E8%AF%BBspring%E6%BA%90%E7%A0%81%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90%E4%BA%8C/</link>
+      <pubDate>Wed, 09 Mar 2016 17:16:21 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/archlinux%E5%AE%89%E8%A3%85%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
-      <description>&lt;p&gt;title: &amp;lsquo;archLinux安装遇到的问题&amp;rsquo;
-date: 2015-12-24 20:25:32
-tags: [linux,arch ]&lt;/p&gt;
+      <guid>https://zhishuo.info/post/blog_hugo/%E8%AF%BBspring%E6%BA%90%E7%A0%81%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90%E4%BA%8C/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;&lt;em&gt;不明白&lt;/em&gt;&lt;/strong&gt;
+&lt;code&gt;DefaultListableBeanFactory.java&lt;/code&gt;中使用了&lt;code&gt;AccessController.doPrivileged()&lt;/code&gt;方法，个人理解此方法好像是以当前上下文执行一些代码。
+&lt;code&gt;javaUtilOptionalClass&lt;/code&gt;这个属性，是用了JDK8的&lt;code&gt;java.util.Optional&lt;/code&gt;,此类是用来避免在Java中出现各种null的问题,但不知道为什么是写在了静态代码块中，而且是以动态加载的方式来加载的。&lt;/p&gt;
 
-&lt;h2 id=&#34;categories-linux&#34;&gt;categories: [linux]&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;初始类&lt;/em&gt;&lt;/strong&gt;
+从&lt;code&gt;DefaultListableBeanFactory.java&lt;/code&gt;类的getBean()中，开始对整个工厂类进分析。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://ogflhfadi.bkt.clouddn.com/DefaultListableBeanFactory.png&#34; alt=&#34;类的关系调用图&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;静态导入，如果你多次用到某个工具类的静态方法，可以使用静态导入，这样使代码更整洁美观。
+&lt;code&gt;SimpleAliasRegistry.java&lt;/code&gt;这个类实现了对Alias的一些操作。
+&lt;code&gt;BeanFactory.java&lt;/code&gt;接口定义一些对Bean的基本操作。
+&lt;code&gt;DefaultSingletonBeanRegistry.java&lt;/code&gt;对spring对Bean的一些操作做了各种封装，创建，消毁，依赖等。
+&lt;code&gt;AbstractAutowireCapableBeanFactory.java&lt;/code&gt;对&lt;code&gt;AutowireCapableBeanFactory&lt;/code&gt;定义的方法进行了实现，此类
+&lt;code&gt;XmlBeanDefinitionReader.java&lt;/code&gt;实现了用xml解析资源文件，并且实现了&lt;code&gt;DefaultListableBeanFactory.java&lt;/code&gt;类&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>阅读ActiveMQ源码总结</title>
+      <link>https://zhishuo.info/post/blog_hugo/%E9%98%85%E8%AF%BBactivemq%E6%BA%90%E7%A0%81%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Thu, 07 Jan 2016 22:06:48 +0000</pubDate>
+      
+      <guid>https://zhishuo.info/post/blog_hugo/%E9%98%85%E8%AF%BBactivemq%E6%BA%90%E7%A0%81%E6%80%BB%E7%BB%93/</guid>
+      <description>&lt;h3 id=&#34;准备工作&#34;&gt;准备工作&lt;/h3&gt;
 
 &lt;ul&gt;
+&lt;li&gt;下载源码&lt;code&gt;git clone https://github.com/apache/activemq.git&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;使用maven编译源码并且下载依赖&lt;code&gt;mvn clean install&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;导入到开发工具eclipse&lt;code&gt;mvn eclipse:eclipse&lt;/code&gt; 或者idea &lt;code&gt;mvn idea:idea&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;默认会去maven中央仓库下载jar包，如果下载速度慢可以翻墙或者改成开源中国的镜像仓库
+&lt;code&gt;xml
+&amp;lt;mirrors&amp;gt;
+&amp;lt;mirror&amp;gt;
+  &amp;lt;id&amp;gt;CN&amp;lt;/id&amp;gt;
+  &amp;lt;name&amp;gt;OSChina Central&amp;lt;/name&amp;gt;
+  &amp;lt;url&amp;gt;http://maven.oschina.net/content/groups/public/&amp;lt;/url&amp;gt;
+  &amp;lt;mirrorOf&amp;gt;central&amp;lt;/mirrorOf&amp;gt;
+&amp;lt;/mirror&amp;gt;
+&amp;lt;/mirrors&amp;gt;
+&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>archLinux安装遇到的问题</title>
+      <link>https://zhishuo.info/post/blog_hugo/archlinux%E5%AE%89%E8%A3%85%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Thu, 24 Dec 2015 20:25:32 +0000</pubDate>
+      
+      <guid>https://zhishuo.info/post/blog_hugo/archlinux%E5%AE%89%E8%A3%85%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
+      <description>&lt;ul&gt;
 &lt;li&gt;pacman -Syy 更新之后才能用&lt;/li&gt;
 &lt;li&gt;启动ssh服务需要安装openssh,&lt;code&gt;pacman -S openssh&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;启动sshd服务&lt;code&gt;systemctl start sshd&lt;/code&gt;&lt;/li&gt;
@@ -269,64 +316,21 @@ tags: [linux,arch ]&lt;/p&gt;
     </item>
     
     <item>
-      <title></title>
-      <link>http://localhost:1313/post/hexo-%E6%90%AD%E5%BB%BA-github-pages-%E9%97%AE%E9%A2%98/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>读activeMQ源码(一)</title>
+      <link>https://zhishuo.info/post/blog_hugo/%E8%AF%BBactivemq%E6%BA%90%E7%A0%81%E4%B8%80/</link>
+      <pubDate>Wed, 09 Dec 2015 00:54:49 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/hexo-%E6%90%AD%E5%BB%BA-github-pages-%E9%97%AE%E9%A2%98/</guid>
-      <description>&lt;p&gt;title: &amp;lsquo;hexo 搭建 github pages  问题&amp;rsquo;
-date: 2014-05-31 18:45:03
-tags: [hexo,github pages]&lt;/p&gt;
-
-&lt;h2 id=&#34;categories-hexo&#34;&gt;categories: [hexo]&lt;/h2&gt;
-
-&lt;p&gt;由于自己想搭建一个免费的博客，所以找到了万能的github，但在搭建的过程中遇到了几个小问题，所以记下来
-基本搭建的方法都是参考于&lt;a href=&#34;http://ibruce.info/2013/11/22/hexo-your-blog/&#34;&gt;利用github搭建博客&lt;/a&gt;
-这个博主已经写的很全了，搭建的过程就不一一提了说下遇到的问题
-1.  hexo上传后博客还是官方的
-    建立了github pages的项目，并且使用了官方的建立建好了一个博客，官方默认会在master分支上开出一个gh-pages分支，然后查了官网资料说所有的内容都是显示gh-pages分支上的，但是我用hexo却传不到gh-pages分支上，并且传到了master分支内容也不会显示，后来找到原因是因为我建立的项目名字不是以#你的github帐户.github.io#命名的，所以会使hexo的上传程序传到master分支上也不会起作用，把项目名修改之后就可以了。
-
-2.  添加多说的问题
-  在官网注册后，复制了多说代码，按&lt;a href=&#34;http://www.leejianyang.com/2014/05/25/duoshuo_tutorial/&#34;&gt;教程&lt;/a&gt;做完之后发现多说模块不显示，所以查看了comment.ejs源代码
-            &amp;lt;% if (config.disqus_shortname &amp;amp;&amp;amp; page.comments){ %&amp;gt;
-  这里是2个判断，把config.disqus_shortname &amp;amp;&amp;amp; 删掉之后，就可以正常使用了。&lt;/p&gt;</description>
+      <guid>https://zhishuo.info/post/blog_hugo/%E8%AF%BBactivemq%E6%BA%90%E7%A0%81%E4%B8%80/</guid>
+      <description>最近的学习到了消息的阶段，查了下网上的资料，并没有很多具体介绍某一个消息中间件的源码是如何实现，帮自己下了源码想分析下去，希望能坚持。 源码G</description>
     </item>
     
     <item>
-      <title></title>
-      <link>http://localhost:1313/post/hexo%E5%8D%9A%E5%AE%A2%E6%8F%90%E4%BA%A4%E5%88%B0%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>mac树莓派安装kaliLinux</title>
+      <link>https://zhishuo.info/post/blog_hugo/mac%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85kalilinux/</link>
+      <pubDate>Fri, 04 Dec 2015 21:13:51 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/hexo%E5%8D%9A%E5%AE%A2%E6%8F%90%E4%BA%A4%E5%88%B0%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/</guid>
-      <description>&lt;p&gt;title: hexo博客提交到搜索引擎
-date: 2014-06-22 10:28:55
-tags: [搜索引擎]&lt;/p&gt;
-
-&lt;h2 id=&#34;categories-hexo&#34;&gt;categories: [hexo]&lt;/h2&gt;
-
-&lt;p&gt;使用了hexo搭建博客之后，于是想把博客地址提交到搜索引擎当中，让搜索引擎来收录，在提交搜索引擎的时候遇到了一些问题记录下来。
-让搜索引擎收录的方式有以下几种:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;提交某个html文件到你的博客根目录下&lt;/li&gt;
-&lt;li&gt;添加网站的meta标签&lt;/li&gt;
-&lt;li&gt;CNAME方式&lt;/li&gt;
-&lt;/ol&gt;</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://localhost:1313/post/mac%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85kalilinux/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/post/mac%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85kalilinux/</guid>
-      <description>&lt;p&gt;title: mac树莓派安装kaliLinux
-date: 2015-12-04 21:13:51
-tags: [树莓派,kali,linux,mac]&lt;/p&gt;
-
-&lt;h2 id=&#34;categories-树莓派&#34;&gt;categories: [树莓派]&lt;/h2&gt;
-
-&lt;p&gt;树莓派到手大概有一周了，想折腾下kali linux，记录下安装步骤。&lt;/p&gt;
+      <guid>https://zhishuo.info/post/blog_hugo/mac%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85kalilinux/</guid>
+      <description>&lt;p&gt;树莓派到手大概有一周了，想折腾下kali linux，记录下安装步骤。&lt;/p&gt;
 
 &lt;p&gt;准备工作，必须品：
 1. 树莓派板子一个
@@ -351,120 +355,64 @@ tags: [树莓派,kali,linux,mac]&lt;/p&gt;
     </item>
     
     <item>
-      <title></title>
-      <link>http://localhost:1313/post/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BC%80%E5%A7%8B%E5%86%99%E5%8D%9A%E5%AE%A2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>树莓派ntp时间同步问题</title>
+      <link>https://zhishuo.info/post/blog_hugo/%E6%A0%91%E8%8E%93%E6%B4%BEntp%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Mon, 30 Nov 2015 22:48:37 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BC%80%E5%A7%8B%E5%86%99%E5%8D%9A%E5%AE%A2/</guid>
-      <description>title: 我为什么开始写博客 date: 2014-05-31 18:14:02 tags: 博客
-categories: 最近参加了几场印象笔记的活动，听大家分享了一些自己坚持做的事，由于最近自己也在整理自己琐碎的事情，感觉虽然自己在技术上一直在积累但那都是自己的眼光和认识，如果与大家分享出来之后这样可以帮助自己有很大的提升。 最近这一年来，在新的公司里自己有了很大的成长，但是发现这些成长记录其实只记录在我的印象笔记里或者是自己的经验上，并没有真正的分享出来，以后在这里记录自己遇到的问题以及一些正在学的技术，自己的理解和学习记录。 希望在这里可以记录下自己技术成长的轨迹，以便和大家共同成长。</description>
+      <guid>https://zhishuo.info/post/blog_hugo/%E6%A0%91%E8%8E%93%E6%B4%BEntp%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5%E9%97%AE%E9%A2%98/</guid>
+      <description>今天刚到手树莓派，看了下时间，于是上网搜了下时间同步的问题。 然而我按照网上修改的同步服务器并不能解决问题，于是自己试着改了一下。 前提：你要选</description>
     </item>
     
     <item>
-      <title></title>
-      <link>http://localhost:1313/post/%E6%A0%91%E8%8E%93%E6%B4%BEntp%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5%E9%97%AE%E9%A2%98/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>读spring源码深度解析</title>
+      <link>https://zhishuo.info/post/blog_hugo/%E8%AF%BBspring%E6%BA%90%E7%A0%81%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90/</link>
+      <pubDate>Thu, 12 Nov 2015 11:35:44 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/%E6%A0%91%E8%8E%93%E6%B4%BEntp%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5%E9%97%AE%E9%A2%98/</guid>
-      <description>title: &amp;lsquo;树莓派ntp时间同步问题&amp;rsquo; date: 2015-11-30 22:48:37 tags: [树莓派,ntp同步]
-categories: [树莓派] 今天刚到手树莓派，看了下时间，于是上网搜了下时间同步的问题。 然而我按照网上修改的同步服务器并不能解决问题，于是自己试着改了一下。
-前提：你要选择正确了时区，运行sudo raspi-config 选择第4项，回车，继续选择第2个，回车，然后选择Aisa，回车，再次选择重庆或者上海，这样时区就调整好了。 网上大部分都说在/etc/ntpd.conf 下
-server 0.debain.pool.ntp.org iburst
-server 1.debain.pool.ntp.org iburst
-server 2.debain.pool.ntp.org iburst
-server 3.debain.pool.ntp.org iburst
-调整服务器为server asia.pool.ntp.org iburst，我自己试了并不可以，于是我参考了一下我的Mac，用了苹果的时间同步服务器，最终修改为server time.apple.com iburst然后重启ntp服务 sudo service ntp restart即可。</description>
+      <guid>https://zhishuo.info/post/blog_hugo/%E8%AF%BBspring%E6%BA%90%E7%A0%81%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90/</guid>
+      <description>工作也有几年了，以前也尝试过想要读spring源码，但由于前几年没有参考资料，所以很难去理解，最近发现一本spring源码深度解析，怀着试试</description>
     </item>
     
     <item>
-      <title></title>
-      <link>http://localhost:1313/post/%E8%AF%BBactivemq%E6%BA%90%E7%A0%81%E4%B8%80/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>hexo博客提交到搜索引擎</title>
+      <link>https://zhishuo.info/post/blog_hugo/hexo%E5%8D%9A%E5%AE%A2%E6%8F%90%E4%BA%A4%E5%88%B0%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/</link>
+      <pubDate>Sun, 22 Jun 2014 10:28:55 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/%E8%AF%BBactivemq%E6%BA%90%E7%A0%81%E4%B8%80/</guid>
-      <description> title: 读activeMQ源码(一) date: 2015-12-09 00:54:49 tags: [java,activemq]
-categories: [java] 最近的学习到了消息的阶段，查了下网上的资料，并没有很多具体介绍某一个消息中间件的源码是如何实现，帮自己下了源码想分析下去，希望能坚持。
-源码GIT下载地址
-下载完之后如果要导入eclipse 执行mvn eclipse:eclipse 或者导入IDEA mvn idea:idea
-说下个人对rpc和消息的理解:
- 这2种方式从架构上就是不同的，rpc一般都是同步的，消息都是异步的，用在不同的场景上。  </description>
+      <guid>https://zhishuo.info/post/blog_hugo/hexo%E5%8D%9A%E5%AE%A2%E6%8F%90%E4%BA%A4%E5%88%B0%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/</guid>
+      <description>&lt;p&gt;使用了hexo搭建博客之后，于是想把博客地址提交到搜索引擎当中，让搜索引擎来收录，在提交搜索引擎的时候遇到了一些问题记录下来。
+让搜索引擎收录的方式有以下几种:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;提交某个html文件到你的博客根目录下&lt;/li&gt;
+&lt;li&gt;添加网站的meta标签&lt;/li&gt;
+&lt;li&gt;CNAME方式&lt;/li&gt;
+&lt;/ol&gt;</description>
     </item>
     
     <item>
-      <title></title>
-      <link>http://localhost:1313/post/%E8%AF%BBspring%E6%BA%90%E7%A0%81%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90%E4%BA%8C/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>hexo 搭建 github pages  问题</title>
+      <link>https://zhishuo.info/post/blog_hugo/hexo-%E6%90%AD%E5%BB%BA-github-pages-%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Sat, 31 May 2014 18:45:03 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/%E8%AF%BBspring%E6%BA%90%E7%A0%81%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90%E4%BA%8C/</guid>
-      <description>&lt;p&gt;title: &amp;lsquo;读spring源码深度解析(二)&amp;rsquo;
-date: 2016-03-09 17:16:21
-tags: [spring,spring源码]&lt;/p&gt;
+      <guid>https://zhishuo.info/post/blog_hugo/hexo-%E6%90%AD%E5%BB%BA-github-pages-%E9%97%AE%E9%A2%98/</guid>
+      <description>&lt;p&gt;由于自己想搭建一个免费的博客，所以找到了万能的github，但在搭建的过程中遇到了几个小问题，所以记下来
+基本搭建的方法都是参考于&lt;a href=&#34;http://ibruce.info/2013/11/22/hexo-your-blog/&#34;&gt;利用github搭建博客&lt;/a&gt;
+这个博主已经写的很全了，搭建的过程就不一一提了说下遇到的问题
+1.  hexo上传后博客还是官方的
+    建立了github pages的项目，并且使用了官方的建立建好了一个博客，官方默认会在master分支上开出一个gh-pages分支，然后查了官网资料说所有的内容都是显示gh-pages分支上的，但是我用hexo却传不到gh-pages分支上，并且传到了master分支内容也不会显示，后来找到原因是因为我建立的项目名字不是以#你的github帐户.github.io#命名的，所以会使hexo的上传程序传到master分支上也不会起作用，把项目名修改之后就可以了。
 
-&lt;h2 id=&#34;categories-java&#34;&gt;categories: [java]&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;不明白&lt;/em&gt;&lt;/strong&gt;
-&lt;code&gt;DefaultListableBeanFactory.java&lt;/code&gt;中使用了&lt;code&gt;AccessController.doPrivileged()&lt;/code&gt;方法，个人理解此方法好像是以当前上下文执行一些代码。
-&lt;code&gt;javaUtilOptionalClass&lt;/code&gt;这个属性，是用了JDK8的&lt;code&gt;java.util.Optional&lt;/code&gt;,此类是用来避免在Java中出现各种null的问题,但不知道为什么是写在了静态代码块中，而且是以动态加载的方式来加载的。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;初始类&lt;/em&gt;&lt;/strong&gt;
-从&lt;code&gt;DefaultListableBeanFactory.java&lt;/code&gt;类的getBean()中，开始对整个工厂类进分析。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://ogflhfadi.bkt.clouddn.com/DefaultListableBeanFactory.png&#34; alt=&#34;类的关系调用图&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;静态导入，如果你多次用到某个工具类的静态方法，可以使用静态导入，这样使代码更整洁美观。
-&lt;code&gt;SimpleAliasRegistry.java&lt;/code&gt;这个类实现了对Alias的一些操作。
-&lt;code&gt;BeanFactory.java&lt;/code&gt;接口定义一些对Bean的基本操作。
-&lt;code&gt;DefaultSingletonBeanRegistry.java&lt;/code&gt;对spring对Bean的一些操作做了各种封装，创建，消毁，依赖等。
-&lt;code&gt;AbstractAutowireCapableBeanFactory.java&lt;/code&gt;对&lt;code&gt;AutowireCapableBeanFactory&lt;/code&gt;定义的方法进行了实现，此类
-&lt;code&gt;XmlBeanDefinitionReader.java&lt;/code&gt;实现了用xml解析资源文件，并且实现了&lt;code&gt;DefaultListableBeanFactory.java&lt;/code&gt;类&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+2.  添加多说的问题
+  在官网注册后，复制了多说代码，按&lt;a href=&#34;http://www.leejianyang.com/2014/05/25/duoshuo_tutorial/&#34;&gt;教程&lt;/a&gt;做完之后发现多说模块不显示，所以查看了comment.ejs源代码
+            &amp;lt;% if (config.disqus_shortname &amp;amp;&amp;amp; page.comments){ %&amp;gt;
+  这里是2个判断，把config.disqus_shortname &amp;amp;&amp;amp; 删掉之后，就可以正常使用了。&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title></title>
-      <link>http://localhost:1313/post/%E8%AF%BBspring%E6%BA%90%E7%A0%81%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>我为什么开始写博客</title>
+      <link>https://zhishuo.info/post/blog_hugo/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BC%80%E5%A7%8B%E5%86%99%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Sat, 31 May 2014 18:14:02 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/%E8%AF%BBspring%E6%BA%90%E7%A0%81%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90/</guid>
-      <description> title: &amp;lsquo;读spring源码深度解析&amp;rsquo; date: 2015-11-12 11:35:44 tags: [spring,spring源码]
-categories: [java] 工作也有几年了，以前也尝试过想要读spring源码，但由于前几年没有参考资料，所以很难去理解，最近发现一本spring源码深度解析，怀着试试看的心情，踏上了源码之路。
-记录一下自己遇到的问题，初次读完之后感觉到了spring的强大之处，处处都是设计模式，把代码拆的很分散，但理解上就很难了。
- 源码下载，spring最新的git源码地址为spring源码 由于spring3.X以后就是使用gradle构建了，所以还需要安装gradle，Mac OS 可以使用HomeBrew brew install gradle 即可 安装好gradle以后，可以在想要查看的spring项目下执行gradle eclipse 生成eclipse的配置文件 最后在Eclipse-&amp;gt;import-&amp;gt;existing Eclipse projects进行导入就可以了 书中有一个查看类实现的接口图，一开始不知道在哪使用，后来发现对着想要查看的类右击，出现选项菜单，点击-&amp;gt;Open Type Hierarchy 即可，默认是显示的子类实现，然后点击上方小图标show the supertype Hierarchy即可 书中作者看到了哪个类中没有做明确提示，如果找不到需要自行搜索，我用的STS，commond+shift+l 可按关键字搜索  </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://localhost:1313/post/%E9%98%85%E8%AF%BBactivemq%E6%BA%90%E7%A0%81%E6%80%BB%E7%BB%93/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/post/%E9%98%85%E8%AF%BBactivemq%E6%BA%90%E7%A0%81%E6%80%BB%E7%BB%93/</guid>
-      <description>&lt;p&gt;title: 阅读ActiveMQ源码总结
-date: 2016-01-07 22:06:48
-tags: [java,ActiveMQ]&lt;/p&gt;
-
-&lt;h2 id=&#34;categories-java&#34;&gt;categories: [java]&lt;/h2&gt;
-
-&lt;h3 id=&#34;准备工作&#34;&gt;准备工作&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;下载源码&lt;code&gt;git clone https://github.com/apache/activemq.git&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;使用maven编译源码并且下载依赖&lt;code&gt;mvn clean install&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;导入到开发工具eclipse&lt;code&gt;mvn eclipse:eclipse&lt;/code&gt; 或者idea &lt;code&gt;mvn idea:idea&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;默认会去maven中央仓库下载jar包，如果下载速度慢可以翻墙或者改成开源中国的镜像仓库
-&lt;code&gt;xml
-&amp;lt;mirrors&amp;gt;
-&amp;lt;mirror&amp;gt;
-  &amp;lt;id&amp;gt;CN&amp;lt;/id&amp;gt;
-  &amp;lt;name&amp;gt;OSChina Central&amp;lt;/name&amp;gt;
-  &amp;lt;url&amp;gt;http://maven.oschina.net/content/groups/public/&amp;lt;/url&amp;gt;
-  &amp;lt;mirrorOf&amp;gt;central&amp;lt;/mirrorOf&amp;gt;
-&amp;lt;/mirror&amp;gt;
-&amp;lt;/mirrors&amp;gt;
-&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <guid>https://zhishuo.info/post/blog_hugo/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BC%80%E5%A7%8B%E5%86%99%E5%8D%9A%E5%AE%A2/</guid>
+      <description>最近参加了几场印象笔记的活动，听大家分享了一些自己坚持做的事，由于最近自己也在整理自己琐碎的事情，感觉虽然自己在技术上一直在积累但那都是自己</description>
     </item>
     
   </channel>

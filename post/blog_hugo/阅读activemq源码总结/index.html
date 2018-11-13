@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>阅读ActiveMQ源码总结 - 代码狗 - 还是写代码能让人幸福</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="kratos" /><meta name="description" content="准备工作  下载源码git clone https://github.com/apache/activemq.git 使用maven编译源码并且下载依赖mvn clean install 导入到开发工具eclipsemvn eclipse:eclipse 或者idea mvn idea:idea 默认会去maven中央仓库下载jar包，如果下载速度慢可以翻墙或者改成开源中国的镜像仓库 xml &amp;lt;mirrors&amp;gt; &amp;lt;mirror&amp;gt; &amp;lt;id&amp;gt;CN&amp;lt;/id&amp;gt; &amp;lt;name&amp;gt;OSChina Central&amp;lt;/name&amp;gt; &amp;lt;url&amp;gt;http://maven.oschina.net/content/groups/public/&amp;lt;/url&amp;gt; &amp;lt;mirrorOf&amp;gt;central&amp;lt;/mirrorOf&amp;gt; &amp;lt;/mirror&amp;gt; &amp;lt;/mirrors&amp;gt;   
+" /><meta name="keywords" content="java, kubernetes, go" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.50 with even 4.0.0" />
+
+
+<link rel="canonical" href="https://zhishuo.info/post/blog_hugo/%E9%98%85%E8%AF%BBactivemq%E6%BA%90%E7%A0%81%E6%80%BB%E7%BB%93/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link href="/dist/even.93844dae.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="阅读ActiveMQ源码总结" />
+<meta property="og:description" content="准备工作
+
+
+下载源码git clone https://github.com/apache/activemq.git
+使用maven编译源码并且下载依赖mvn clean install
+导入到开发工具eclipsemvn eclipse:eclipse 或者idea mvn idea:idea
+默认会去maven中央仓库下载jar包，如果下载速度慢可以翻墙或者改成开源中国的镜像仓库
+xml
+&lt;mirrors&gt;
+&lt;mirror&gt;
+  &lt;id&gt;CN&lt;/id&gt;
+  &lt;name&gt;OSChina Central&lt;/name&gt;
+  &lt;url&gt;http://maven.oschina.net/content/groups/public/&lt;/url&gt;
+  &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;
+&lt;/mirror&gt;
+&lt;/mirrors&gt;
+
+
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://zhishuo.info/post/blog_hugo/%E9%98%85%E8%AF%BBactivemq%E6%BA%90%E7%A0%81%E6%80%BB%E7%BB%93/" /><meta property="article:published_time" content="2016-01-07T22:06:48&#43;00:00"/>
+<meta property="article:modified_time" content="2016-01-07T22:06:48&#43;00:00"/>
+
+<meta itemprop="name" content="阅读ActiveMQ源码总结">
+<meta itemprop="description" content="准备工作
+
+
+下载源码git clone https://github.com/apache/activemq.git
+使用maven编译源码并且下载依赖mvn clean install
+导入到开发工具eclipsemvn eclipse:eclipse 或者idea mvn idea:idea
+默认会去maven中央仓库下载jar包，如果下载速度慢可以翻墙或者改成开源中国的镜像仓库
+xml
+&lt;mirrors&gt;
+&lt;mirror&gt;
+  &lt;id&gt;CN&lt;/id&gt;
+  &lt;name&gt;OSChina Central&lt;/name&gt;
+  &lt;url&gt;http://maven.oschina.net/content/groups/public/&lt;/url&gt;
+  &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;
+&lt;/mirror&gt;
+&lt;/mirrors&gt;
+
+
+
+">
+
+
+<meta itemprop="datePublished" content="2016-01-07T22:06:48&#43;00:00" />
+<meta itemprop="dateModified" content="2016-01-07T22:06:48&#43;00:00" />
+<meta itemprop="wordCount" content="3612">
+
+
+
+<meta itemprop="keywords" content="java,ActiveMQ," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="阅读ActiveMQ源码总结"/>
+<meta name="twitter:description" content="准备工作
+
+
+下载源码git clone https://github.com/apache/activemq.git
+使用maven编译源码并且下载依赖mvn clean install
+导入到开发工具eclipsemvn eclipse:eclipse 或者idea mvn idea:idea
+默认会去maven中央仓库下载jar包，如果下载速度慢可以翻墙或者改成开源中国的镜像仓库
+xml
+&lt;mirrors&gt;
+&lt;mirror&gt;
+  &lt;id&gt;CN&lt;/id&gt;
+  &lt;name&gt;OSChina Central&lt;/name&gt;
+  &lt;url&gt;http://maven.oschina.net/content/groups/public/&lt;/url&gt;
+  &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;
+&lt;/mirror&gt;
+&lt;/mirrors&gt;
+
+
+
+"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">我在这里</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">我在这里</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">阅读ActiveMQ源码总结</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2016-01-07 </span>
+        <div class="post-category">
+            <a href="/categories/java/"> java </a>
+            </div>
+          <span class="more-meta"> 约 3612 字 </span>
+          <span class="more-meta"> 预计阅读 8 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#准备工作">准备工作</a></li>
+<li><a href="#遇到的问题">遇到的问题</a></li>
+<li><a href="#客户端启动">客户端启动</a></li>
+<li><a href="#代码分析">代码分析</a></li>
+<li><a href="#服务端启动">服务端启动</a></li>
+<li><a href="#问题">问题</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h3 id="准备工作">准备工作</h3>
+
+<ul>
+<li>下载源码<code>git clone https://github.com/apache/activemq.git</code></li>
+<li>使用maven编译源码并且下载依赖<code>mvn clean install</code></li>
+<li>导入到开发工具eclipse<code>mvn eclipse:eclipse</code> 或者idea <code>mvn idea:idea</code></li>
+<li>默认会去maven中央仓库下载jar包，如果下载速度慢可以翻墙或者改成开源中国的镜像仓库
+<code>xml
+&lt;mirrors&gt;
+&lt;mirror&gt;
+  &lt;id&gt;CN&lt;/id&gt;
+  &lt;name&gt;OSChina Central&lt;/name&gt;
+  &lt;url&gt;http://maven.oschina.net/content/groups/public/&lt;/url&gt;
+  &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;
+&lt;/mirror&gt;
+&lt;/mirrors&gt;
+</code></li>
+</ul>
+
+<p></p>
+
+<h3 id="遇到的问题">遇到的问题</h3>
+
+<ul>
+<li>idea导入之后无任何显示，事实证明楼主太着急，等编译之后就有了。。</li>
+</ul>
+
+<h3 id="客户端启动">客户端启动</h3>
+
+<ul>
+<li>java客户端代码我是按照《Java消息服务》这本书中的例子完成的</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span><span class="lnt">83
+</span><span class="lnt">84
+</span><span class="lnt">85
+</span><span class="lnt">86
+</span><span class="lnt">87
+</span><span class="lnt">88
+</span><span class="lnt">89
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java">  <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Chat</span> <span class="kd">implements</span> <span class="n">javax</span><span class="o">.</span><span class="na">jms</span><span class="o">.</span><span class="na">MessageListener</span><span class="o">{</span>
+
+	<span class="kd">private</span> <span class="n">TopicSession</span> <span class="n">pubSession</span><span class="o">;</span>
+	<span class="kd">private</span> <span class="n">TopicPublisher</span> <span class="n">publisher</span><span class="o">;</span>
+	<span class="kd">private</span> <span class="n">TopicConnection</span> <span class="n">connection</span><span class="o">;</span>
+	<span class="kd">private</span> <span class="n">String</span> <span class="n">username</span><span class="o">;</span>
+
+	<span class="cm">/**
+</span><span class="cm">	 * @param topicFactory
+</span><span class="cm">	 * @param topicName
+</span><span class="cm">	 * @param username
+</span><span class="cm">	 * @throws Exception
+</span><span class="cm">	 */</span>
+	<span class="kd">public</span> <span class="nf">Chat</span><span class="o">(</span><span class="n">String</span> <span class="n">topicFactory</span><span class="o">,</span><span class="n">String</span> <span class="n">topicName</span><span class="o">,</span><span class="n">String</span> <span class="n">username</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+		<span class="c1">//使用JNDI？
+</span><span class="c1"></span>		<span class="n">InitialContext</span> <span class="n">ctx</span> <span class="o">=</span> <span class="k">new</span> <span class="n">InitialContext</span><span class="o">();</span>
+		<span class="c1">//拿到工场
+</span><span class="c1"></span>		<span class="n">TopicConnectionFactory</span> <span class="n">conFactory</span> <span class="o">=</span> <span class="o">(</span><span class="n">TopicConnectionFactory</span><span class="o">)</span><span class="n">ctx</span><span class="o">.</span><span class="na">lookup</span><span class="o">(</span><span class="n">topicFactory</span><span class="o">);</span>
+		<span class="c1">//创建连接
+</span><span class="c1"></span>		<span class="n">TopicConnection</span> <span class="n">connection</span> <span class="o">=</span> <span class="n">conFactory</span><span class="o">.</span><span class="na">createTopicConnection</span><span class="o">();</span>
+
+		<span class="n">TopicSession</span> <span class="n">pubSession</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="na">createTopicSession</span><span class="o">(</span><span class="kc">false</span><span class="o">,</span> <span class="n">Session</span><span class="o">.</span><span class="na">AUTO_ACKNOWLEDGE</span><span class="o">);</span>
+		<span class="n">TopicSession</span> <span class="n">subSession</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="na">createTopicSession</span><span class="o">(</span><span class="kc">false</span><span class="o">,</span> <span class="n">Session</span><span class="o">.</span><span class="na">AUTO_ACKNOWLEDGE</span><span class="o">);</span>
+
+		<span class="n">Topic</span> <span class="n">chatTopic</span> <span class="o">=</span> <span class="o">(</span><span class="n">Topic</span><span class="o">)</span><span class="n">ctx</span><span class="o">.</span><span class="na">lookup</span><span class="o">(</span><span class="n">topicName</span><span class="o">);</span>
+
+		<span class="n">TopicPublisher</span> <span class="n">publisher</span> <span class="o">=</span> <span class="n">pubSession</span><span class="o">.</span><span class="na">createPublisher</span><span class="o">(</span><span class="n">chatTopic</span><span class="o">);</span>
+		<span class="n">String</span> <span class="n">selector</span> <span class="o">=</span> <span class="s">&#34;username=zhishuo&#34;</span><span class="o">;</span>
+		<span class="n">TopicSubscriber</span> <span class="n">subscriber</span> <span class="o">=</span> <span class="n">subSession</span><span class="o">.</span><span class="na">createSubscriber</span><span class="o">(</span><span class="n">chatTopic</span><span class="o">,</span><span class="n">selector</span><span class="o">,</span><span class="kc">true</span><span class="o">);</span>
+
+		<span class="n">subscriber</span><span class="o">.</span><span class="na">setMessageListener</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+
+		<span class="k">this</span><span class="o">.</span><span class="na">connection</span> <span class="o">=</span> <span class="n">connection</span><span class="o">;</span>
+		<span class="k">this</span><span class="o">.</span><span class="na">pubSession</span> <span class="o">=</span> <span class="n">pubSession</span><span class="o">;</span>
+		<span class="k">this</span><span class="o">.</span><span class="na">publisher</span> <span class="o">=</span> <span class="n">publisher</span><span class="o">;</span>
+		<span class="k">this</span><span class="o">.</span><span class="na">username</span> <span class="o">=</span> <span class="n">username</span><span class="o">;</span>
+		<span class="n">connection</span><span class="o">.</span><span class="na">start</span><span class="o">();</span>
+
+	<span class="o">}</span>
+
+
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">onMessage</span><span class="o">(</span><span class="n">Message</span> <span class="n">message</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">try</span> <span class="o">{</span>
+			<span class="n">TextMessage</span> <span class="n">textMessage</span> <span class="o">=</span> <span class="o">(</span><span class="n">TextMessage</span><span class="o">)</span><span class="n">message</span><span class="o">;</span>
+			<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">textMessage</span><span class="o">.</span><span class="na">getText</span><span class="o">());</span>
+			<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">message</span><span class="o">.</span><span class="na">getJMSDestination</span><span class="o">());</span>
+		<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+			<span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+
+	<span class="cm">/**
+</span><span class="cm">	 * 发送消息
+</span><span class="cm">	 * @param text
+</span><span class="cm">	 * @throws JMSException
+</span><span class="cm">	 */</span>
+	<span class="kd">protected</span> <span class="kt">void</span> <span class="nf">writeMessage</span><span class="o">(</span><span class="n">String</span> <span class="n">text</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">JMSException</span> <span class="o">{</span>
+		<span class="n">TextMessage</span> <span class="n">textMessage</span> <span class="o">=</span> <span class="n">pubSession</span><span class="o">.</span><span class="na">createTextMessage</span><span class="o">(</span><span class="n">username</span><span class="o">+</span><span class="s">&#34;:&#34;</span><span class="o">+</span><span class="n">text</span><span class="o">);</span>
+		<span class="n">publisher</span><span class="o">.</span><span class="na">publish</span><span class="o">(</span><span class="n">textMessage</span><span class="o">);</span>
+	<span class="o">}</span>
+
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">close</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">JMSException</span> <span class="o">{</span>
+		<span class="n">connection</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+	<span class="o">}</span>
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">try</span> <span class="o">{</span>
+			<span class="k">if</span><span class="o">(</span><span class="n">args</span><span class="o">.</span><span class="na">length</span><span class="o">!=</span><span class="n">3</span><span class="o">){</span>
+				<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;something is missing&#34;</span><span class="o">);</span>
+			<span class="o">}</span>
+			<span class="c1">// topicFactory, topicName, username
+</span><span class="c1"></span>			<span class="n">Chat</span> <span class="n">chat</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Chat</span><span class="o">(</span><span class="n">args</span><span class="o">[</span><span class="n">0</span><span class="o">],</span><span class="n">args</span><span class="o">[</span><span class="n">1</span><span class="o">],</span><span class="n">args</span><span class="o">[</span><span class="n">2</span><span class="o">]);</span>
+			<span class="n">BufferedReader</span> <span class="n">commondLine</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="n">InputStreamReader</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">in</span><span class="o">));</span>
+
+			<span class="k">while</span><span class="o">(</span><span class="kc">true</span><span class="o">){</span>
+				<span class="n">String</span> <span class="n">s</span> <span class="o">=</span> <span class="n">commondLine</span><span class="o">.</span><span class="na">readLine</span><span class="o">();</span>
+				<span class="k">if</span><span class="o">(</span><span class="n">s</span><span class="o">.</span><span class="na">equalsIgnoreCase</span><span class="o">(</span><span class="s">&#34;exit&#34;</span><span class="o">)){</span>
+					<span class="n">chat</span><span class="o">.</span><span class="na">clone</span><span class="o">();</span>
+					<span class="n">System</span><span class="o">.</span><span class="na">exit</span><span class="o">(</span><span class="n">0</span><span class="o">);</span>
+				<span class="o">}</span><span class="k">else</span><span class="o">{</span>
+					<span class="n">chat</span><span class="o">.</span><span class="na">writeMessage</span><span class="o">(</span><span class="n">s</span><span class="o">);</span>
+				<span class="o">}</span>
+			<span class="o">}</span>
+		<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+			<span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+
+<span class="o">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<ul>
+<li><p>还需要在classpath中加入<code>jndi.properties</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-properties" data-lang="properties"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-properties" data-lang="properties">#配置实现工场
+java.naming.factory.initial=org.apache.activemq.jndi.ActiveMQInitialContextFactory
+#配置activemq地址
+java.naming.provider.url=tcp://localhost:61616
+#这里是配置的安全机制？
+java.naming.security.principal=system
+java.naming.security.credentials=manager
+#订阅主题的名称，可以以逗号,隔开
+connectionFactoryNames=TopicCF
+#topic
+topic.topic1=jms.topic1</code></pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>启动<code>Chart</code>类main方法时，传入<code>TopicCF topic1 zhishuo</code>这样客户端就可以正常启动，
+并且发送消息了，如果启动多个客户端，然后按回车发送消息，所有的人都可以看到。</p></li>
+</ul>
+
+<h3 id="代码分析">代码分析</h3>
+
+<ul>
+<li><code>InitialContext ctx = new InitialContext();</code>
+这里是JMS给出的公用调用方法，new对象时调用了默认的init()方法。
+<code>myProps = (Hashtable&lt;Object,Object&gt;)   ResourceManager.getInitialEnvironment(environment);</code>里面主要是去加载当前环境变量
+和一些JVM设置的环境变量参数。</li>
+<li>主要初始化都在<code>getDefaultInitCtx()---&gt;NamingManager.getInitialContext(myProps);</code>
+中完成，会在环境变量配置参数中找到<code>String INITIAL_CONTEXT_FACTORY = &quot;java.naming.factory.initial&quot;;</code>
+key值，由于我们这里配置的是<code>java.naming.factory.initial=org.apache.activemq.jndi.ActiveMQInitialContextFactory</code>，所以实例化的也就是<code>ActiveMQInitialcontextFactory</code>，最后再调用<code>ActiveMQInitialcontextFactory.getInitialContext(env)</code>这里传过去的参数是环境变量。</li>
+
+<li><p>我们来到<code>ActiveMQInitialcontextFactory.getInitialContext(env)</code>方法中，此方法便是真正用来初始化队列，
+主题</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="n">Context</span> <span class="nf">getInitialContext</span><span class="o">(</span><span class="n">Hashtable</span> <span class="n">environment</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">NamingException</span> <span class="o">{</span>
+   <span class="c1">// lets create a factory
+</span><span class="c1"></span>   <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Object</span><span class="o">&gt;</span> <span class="n">data</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ConcurrentHashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Object</span><span class="o">&gt;();</span>
+   <span class="n">String</span><span class="o">[]</span> <span class="n">names</span> <span class="o">=</span> <span class="n">getConnectionFactoryNames</span><span class="o">(</span><span class="n">environment</span><span class="o">);</span>
+   <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">names</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+       <span class="n">ActiveMQConnectionFactory</span> <span class="n">factory</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+       <span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="n">names</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+
+       <span class="k">try</span> <span class="o">{</span>
+           <span class="n">factory</span> <span class="o">=</span> <span class="n">createConnectionFactory</span><span class="o">(</span><span class="n">name</span><span class="o">,</span> <span class="n">environment</span><span class="o">);</span>
+       <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+           <span class="k">throw</span> <span class="k">new</span> <span class="n">NamingException</span><span class="o">(</span><span class="s">&#34;Invalid broker URL&#34;</span><span class="o">);</span>
+
+       <span class="o">}</span>
+       <span class="cm">/*
+</span><span class="cm">        * if( broker==null ) { try { broker = factory.getEmbeddedBroker(); }
+</span><span class="cm">        * catch (JMSException e) { log.warn(&#34;Failed to get embedded
+</span><span class="cm">        * broker&#34;, e); } }
+</span><span class="cm">        */</span>
+       <span class="n">data</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">name</span><span class="o">,</span> <span class="n">factory</span><span class="o">);</span> <span class="c1">// 实际上是 tocipIF ActiveMQConnectionFactory
+</span><span class="c1"></span>   <span class="o">}</span>
+
+   <span class="n">createQueues</span><span class="o">(</span><span class="n">data</span><span class="o">,</span> <span class="n">environment</span><span class="o">);</span>
+   <span class="n">createTopics</span><span class="o">(</span><span class="n">data</span><span class="o">,</span> <span class="n">environment</span><span class="o">);</span>
+   <span class="cm">/*
+</span><span class="cm">    * if (broker != null) { data.put(&#34;destinations&#34;,
+</span><span class="cm">    * broker.getDestinationContext(environment)); }
+</span><span class="cm">    */</span>
+   <span class="n">data</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&#34;dynamicQueues&#34;</span><span class="o">,</span> <span class="k">new</span> <span class="n">LazyCreateContext</span><span class="o">()</span> <span class="o">{</span>
+       <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">long</span> <span class="n">serialVersionUID</span> <span class="o">=</span> <span class="n">6503881346214855588L</span><span class="o">;</span>
+
+       <span class="nd">@Override</span>
+       <span class="kd">protected</span> <span class="n">Object</span> <span class="nf">createEntry</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+           <span class="k">return</span> <span class="k">new</span> <span class="n">ActiveMQQueue</span><span class="o">(</span><span class="n">name</span><span class="o">);</span>
+       <span class="o">}</span>
+   <span class="o">});</span>
+   <span class="n">data</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&#34;dynamicTopics&#34;</span><span class="o">,</span> <span class="k">new</span> <span class="n">LazyCreateContext</span><span class="o">()</span> <span class="o">{</span>
+       <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">long</span> <span class="n">serialVersionUID</span> <span class="o">=</span> <span class="n">2019166796234979615L</span><span class="o">;</span>
+
+       <span class="nd">@Override</span>
+       <span class="kd">protected</span> <span class="n">Object</span> <span class="nf">createEntry</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+           <span class="k">return</span> <span class="k">new</span> <span class="n">ActiveMQTopic</span><span class="o">(</span><span class="n">name</span><span class="o">);</span>
+       <span class="o">}</span>
+   <span class="o">});</span>
+
+   <span class="k">return</span> <span class="n">createContext</span><span class="o">(</span><span class="n">environment</span><span class="o">,</span> <span class="n">data</span><span class="o">);</span>
+<span class="o">}</span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+
+<p><code>getConnectionFactoryNames</code>方法中，是为了遍历并且初始化<code>connectionFactoryNames</code>配置的Value值，我们这里配置的<code>connectionFactoryNames=TopicCF</code>，这里用到了<code>StringTokenizer</code>感觉很好用，平时自己都是用string的split，没想到还有这种用法。
+然后遍历刚才解析的Value值，并且最终创建<code>ActiveMQConnectionFactory</code>对象返回。
+把创建好的对像放入Hashmap中，map.put(TopicCF,ActiveMQConnectionFactory)，
+&gt; failover://tcp://localhost:61616 这是此对象初始化时url属性的默认值
+初始化的时候修改成了tcp://localhost:61616</p>
+
+<p>这里是每一个value值都对应一个自己的工厂类。</p>
+
+<p>接下来创建Queues和Topics查找配置文件中以queue.和topic.开头的，并且生成ActiveMQQueue对象。
+我们这里配置的<code>jms.topic1</code>最后也放入map.put(topic1,ActiveMQTopic)。</p>
+
+<p>接下来创建了动态的队列和主题，不知何用。
+dynamicQueues
+dynamicTopics
+并且都放入了map
+最后创建了ReadOnlyContext对象，并且把相关的数据绑定都传入其中。
+至此第一句代码初始化完成。</p>
+
+<ul>
+<li><p><code>(TopicConnectionFactory)ctx.lookup(topicFactory)</code>这里是去加载实现工厂的类，由于上一个初始化最终返回的是
+ReadOnlyContext对象，所以这里调用的是ReadOnlyContext.lookup方法，我们来看<code>public Object lookup(String name) throws NamingException {</code>方法，这里其实就是根据传入的名称，取出相应的工厂，由于我们在启动时传入的工厂类名是
+TopicCF 所以，这里就是取出刚才放入的ActiveMQConnectionFactory工厂类，类图如下
+<img src="http://ogflhfadi.bkt.clouddn.com/ActiveMQConnectionFactory%E7%B1%BB%E5%9B%BE.png" alt="类图" /></p></li>
+
+<li><p><code>conFactory.createTopicConnection()</code>，这里是调用的ActiveMQConnectionFactory中的方法，该类中初始化了传输协议模式</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="k">if</span> <span class="o">(</span><span class="n">scheme</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">&#34;auto&#34;</span><span class="o">))</span> <span class="o">{</span>
+ <span class="n">connectBrokerUL</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URI</span><span class="o">(</span><span class="n">brokerURL</span><span class="o">.</span><span class="na">toString</span><span class="o">().</span><span class="na">replace</span><span class="o">(</span><span class="s">&#34;auto&#34;</span><span class="o">,</span> <span class="s">&#34;tcp&#34;</span><span class="o">));</span>
+<span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">scheme</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">&#34;auto+ssl&#34;</span><span class="o">))</span> <span class="o">{</span>
+ <span class="n">connectBrokerUL</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URI</span><span class="o">(</span><span class="n">brokerURL</span><span class="o">.</span><span class="na">toString</span><span class="o">().</span><span class="na">replace</span><span class="o">(</span><span class="s">&#34;auto+ssl&#34;</span><span class="o">,</span> <span class="s">&#34;ssl&#34;</span><span class="o">));</span>
+<span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">scheme</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">&#34;auto+nio&#34;</span><span class="o">))</span> <span class="o">{</span>
+ <span class="n">connectBrokerUL</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URI</span><span class="o">(</span><span class="n">brokerURL</span><span class="o">.</span><span class="na">toString</span><span class="o">().</span><span class="na">replace</span><span class="o">(</span><span class="s">&#34;auto+nio&#34;</span><span class="o">,</span> <span class="s">&#34;nio&#34;</span><span class="o">));</span>
+<span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">scheme</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">&#34;auto+nio+ssl&#34;</span><span class="o">))</span> <span class="o">{</span>
+ <span class="n">connectBrokerUL</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URI</span><span class="o">(</span><span class="n">brokerURL</span><span class="o">.</span><span class="na">toString</span><span class="o">().</span><span class="na">replace</span><span class="o">(</span><span class="s">&#34;auto+nio+ssl&#34;</span><span class="o">,</span> <span class="s">&#34;nio+ssl&#34;</span><span class="o">));</span>
+<span class="o">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>如果以上都没有配置，默认使用TCP协议传输，在<code>TransportFactory.connect()--&gt;findTransportFactory()</code>中，查找资源对应的配置协议，如果没有查到，使用默认的在
+<code>private static final FactoryFinder TRANSPORT_FACTORY_FINDER = new FactoryFinder(&quot;META-INF/services/org/apache/activemq/transport/&quot;);</code>此文件目录中，因为这里是用的<code>tcp://localhost:61616</code>所以这里使用的就是<code>META-INF/services/org/apache/activemq/transport/tcp</code>文件，此文件中实际配置的是TCP的传输器</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-properties" data-lang="properties"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-properties" data-lang="properties">class=org.apache.activemq.transport.tcp.TcpTransportFactory</code></pre></td></tr></table>
+</div>
+</div>
+<p>然后调TcpTransportFactory.doConnect()进行连接，至此传输器创建完成。</p></li>
+
+<li><p>接下来创建ActiveMQConnection连接</p></li>
+
+<li><p>最后启动连接，并且设置一些默认值，至此创建连接完成，并返回连接。</p></li>
+
+<li><p><code>TopicSession pubSession = connection.createTopicSession(false, Session.AUTO_ACKNOWLEDGE);</code>创建发布和订阅Session，
+最终调用的是ActiveMQConnection.createTopicSession()，创建ActiveMQSession对像并返回。</p></li>
+
+<li><p><code>Topic chatTopic = (Topic)ctx.lookup(topicName);</code>加载主题，这里的值为<code>topic1</code>，
+因为在前边初始化的时候已经放入了对像，所以这里的值为<code>ActiveMQTopic</code>，调用ActiveMQSession.createPublisher() 和 createSubscriber() 创建发布者ActiveMQTopicPublisher和消费者ActiveMQTopicSubscriber。</p></li>
+
+<li><p>创建完成之后，把自己设置为订阅者的监听器，最终启动连接，客户端启动代码分析完成，因为有一些自己也不是很理解，所以未能表达。</p></li>
+</ul>
+
+<h3 id="服务端启动">服务端启动</h3>
+
+<ul>
+<li>以下是服务端启动的类图调用关系:
+<img src="http://ogflhfadi.bkt.clouddn.com/active_server_start_seq.png" alt="启动类图" /></li>
+</ul>
+
+<p><em>这里还了解了java -D 是可以把一些参数设置到JVM中的</em></p>
+
+<p>服务端启动这里充分体现了命令设计模式的案例，我认为是很好的学习例子，最终调用的是StartCommand.runTask()方法，类中有如下几个重要功能
+  - 初始化broker
+  - 添加JVM shutdownhook 停止时进行清理</p>
+
+<p>下面来看<code>broker = BrokerFactory.createBroker(configURI);</code>此类中在创建工厂时也使用了文件配置的方法由于默认是使用的<code>xbean:activemq.xml</code>资源文件，所以在创建工厂时就是实例化的
+<code>META-INF/services/org/apache/activemq/broker/</code>xbean文件中配置的类，</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-properties" data-lang="properties"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-properties" data-lang="properties">class=org.apache.activemq.xbean.XBeanBrokerFactory</code></pre></td></tr></table>
+</div>
+</div>
+<p>实际调用的是<code>XBeanBrokerFactory.createBroker()</code>此类中创建了Spring的<code>ResourceXmlApplicationContext</code>实现对象，但不知这里为何要这样。这里最后还调用了spring框架中refresh方法，此方法会初始化spring整个框架。
+最终创建一个BrokerService返回，broker中包含了所有上下文环境。</p>
+
+<p>KahaDBPersistenceAdapter 调用关系图
+<img src="http://ogflhfadi.bkt.clouddn.com/active_db_ref.png" alt="调用关系" /></p>
+
+<p>KahaDBPersistenceAdapter 用例图</p>
+
+<p><img src="http://ogflhfadi.bkt.clouddn.com/active_server_db_ref.png" alt="调用关系" />
+最后启动，至此服务启动完成。</p>
+
+<h3 id="问题">问题</h3>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">kratos</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2016-01-07</span>
+  </p>
+  
+  
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/java/">java</a>
+          <a href="/tags/activemq/">ActiveMQ</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/blog_hugo/%E8%AF%BBspring%E6%BA%90%E7%A0%81%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90%E4%BA%8C/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">读spring源码深度解析(二)</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/blog_hugo/archlinux%E5%AE%89%E8%A3%85%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/">
+            <span class="next-text nav-default">archLinux安装遇到的问题</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:jingboshuo@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/imkratos" class="iconfont icon-github" title="github"></a>
+  <a href="https://zhishuo.info/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2014 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">kratos</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.ece58db6.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

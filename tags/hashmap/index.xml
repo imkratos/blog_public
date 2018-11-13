@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>hashMap on Even - A super concise theme for Hugo</title>
-    <link>http://localhost:1313/tags/hashmap/</link>
-    <description>Recent content in hashMap on Even - A super concise theme for Hugo</description>
+    <title>hashMap on 代码狗 - 还是写代码能让人幸福</title>
+    <link>https://zhishuo.info/tags/hashmap/</link>
+    <description>Recent content in hashMap on 代码狗 - 还是写代码能让人幸福</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh-cn</language>
     <lastBuildDate>Sat, 12 Nov 2016 15:39:10 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/hashmap/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zhishuo.info/tags/hashmap/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>JDK源码之HashMap</title>
-      <link>http://localhost:1313/post/jdk%E6%BA%90%E7%A0%81%E4%B9%8Bhashmap/</link>
+      <link>https://zhishuo.info/post/blog_hugo/jdk%E6%BA%90%E7%A0%81%E4%B9%8Bhashmap/</link>
       <pubDate>Sat, 12 Nov 2016 15:39:10 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/jdk%E6%BA%90%E7%A0%81%E4%B9%8Bhashmap/</guid>
+      <guid>https://zhishuo.info/post/blog_hugo/jdk%E6%BA%90%E7%A0%81%E4%B9%8Bhashmap/</guid>
       <description>&lt;h4 id=&#34;什么是hashmap&#34;&gt;什么是HashMap&lt;/h4&gt;
 
 &lt;p&gt;HashMap是一个可以提供O(1)时间复杂度的数据结构，由数组和链表数据结构组成。在对存入的key进行hash之后，然后用hash值在数组上确定一个位置，把value对象以Node节点形式放入到数组的链表当中。&lt;/p&gt;

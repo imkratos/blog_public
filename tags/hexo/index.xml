@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>hexo on Even - A super concise theme for Hugo</title>
-    <link>http://localhost:1313/tags/hexo/</link>
-    <description>Recent content in hexo on Even - A super concise theme for Hugo</description>
+    <title>hexo on 代码狗 - 还是写代码能让人幸福</title>
+    <link>https://zhishuo.info/tags/hexo/</link>
+    <description>Recent content in hexo on 代码狗 - 还是写代码能让人幸福</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh-cn</language>
     <lastBuildDate>Sat, 26 Nov 2016 17:19:09 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/hexo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zhishuo.info/tags/hexo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>hexo博客主动推送到百度站长平台</title>
-      <link>http://localhost:1313/post/hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E5%8A%A8%E6%8E%A8%E9%80%81%E5%88%B0%E7%99%BE%E5%BA%A6%E7%AB%99%E9%95%BF%E5%B9%B3%E5%8F%B0/</link>
+      <link>https://zhishuo.info/post/blog_hugo/hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E5%8A%A8%E6%8E%A8%E9%80%81%E5%88%B0%E7%99%BE%E5%BA%A6%E7%AB%99%E9%95%BF%E5%B9%B3%E5%8F%B0/</link>
       <pubDate>Sat, 26 Nov 2016 17:19:09 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E5%8A%A8%E6%8E%A8%E9%80%81%E5%88%B0%E7%99%BE%E5%BA%A6%E7%AB%99%E9%95%BF%E5%B9%B3%E5%8F%B0/</guid>
+      <guid>https://zhishuo.info/post/blog_hugo/hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E5%8A%A8%E6%8E%A8%E9%80%81%E5%88%B0%E7%99%BE%E5%BA%A6%E7%AB%99%E9%95%BF%E5%B9%B3%E5%8F%B0/</guid>
       <description>&lt;h4 id=&#34;推送百度站长平台&#34;&gt;推送百度站长平台&lt;/h4&gt;
 
 &lt;p&gt;百度站长平台有几种方式提交自己的链接
@@ -31,10 +31,10 @@
     
     <item>
       <title>hexo博客next主题修改静态资源为CDN</title>
-      <link>http://localhost:1313/post/hexo%E5%8D%9A%E5%AE%A2next%E4%B8%BB%E9%A2%98%E4%BF%AE%E6%94%B9%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E4%B8%BAcdn/</link>
+      <link>https://zhishuo.info/post/blog_hugo/hexo%E5%8D%9A%E5%AE%A2next%E4%B8%BB%E9%A2%98%E4%BF%AE%E6%94%B9%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E4%B8%BAcdn/</link>
       <pubDate>Tue, 15 Nov 2016 23:55:21 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/hexo%E5%8D%9A%E5%AE%A2next%E4%B8%BB%E9%A2%98%E4%BF%AE%E6%94%B9%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E4%B8%BAcdn/</guid>
+      <guid>https://zhishuo.info/post/blog_hugo/hexo%E5%8D%9A%E5%AE%A2next%E4%B8%BB%E9%A2%98%E4%BF%AE%E6%94%B9%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E4%B8%BAcdn/</guid>
       <description>&lt;h2 id=&#34;问题&#34;&gt;问题&lt;/h2&gt;
 
 &lt;p&gt;博主最近看到博客打开速度非常慢，点开chrome的开发者工具查看是由于css,js,图片加载太慢，故&lt;code&gt;css,js&lt;/code&gt;换成了国内的cdn，图片换成了&lt;a href=&#34;http://www.qiniu.com/&#34;&gt;七牛云&lt;/a&gt;。
@@ -44,20 +44,38 @@
     
     <item>
       <title>hexo next主题添加LeanCloud统计功能</title>
-      <link>http://localhost:1313/post/hexo-next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0leancloud%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD/</link>
+      <link>https://zhishuo.info/post/blog_hugo/hexo-next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0leancloud%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD/</link>
       <pubDate>Thu, 10 Nov 2016 20:51:47 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/hexo-next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0leancloud%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD/</guid>
+      <guid>https://zhishuo.info/post/blog_hugo/hexo-next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0leancloud%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD/</guid>
       <description>遇到的问题 网上能查到很多next主题添加LeanCloud主题的方法，但我看都是说在站点的_config.yml中添加 1 2 3 4 leancloud_visitors: enable: true app_id: appid app_key: key</description>
     </item>
     
     <item>
       <title>使用hexo生成博客在github js css 404解决方案</title>
-      <link>http://localhost:1313/post/%E4%BD%BF%E7%94%A8hexo%E7%94%9F%E6%88%90%E5%8D%9A%E5%AE%A2%E5%9C%A8github-js-css-404%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
+      <link>https://zhishuo.info/post/blog_hugo/%E4%BD%BF%E7%94%A8hexo%E7%94%9F%E6%88%90%E5%8D%9A%E5%AE%A2%E5%9C%A8github-js-css-404%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
       <pubDate>Fri, 04 Nov 2016 13:32:58 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/%E4%BD%BF%E7%94%A8hexo%E7%94%9F%E6%88%90%E5%8D%9A%E5%AE%A2%E5%9C%A8github-js-css-404%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid>
+      <guid>https://zhishuo.info/post/blog_hugo/%E4%BD%BF%E7%94%A8hexo%E7%94%9F%E6%88%90%E5%8D%9A%E5%AE%A2%E5%9C%A8github-js-css-404%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid>
       <description>问题 博主最近又开始写博客了，发现使用hexo next 主题，上传到github上之后，所有的vendors文件夹下的资源访问404，博主查了一些资料</description>
+    </item>
+    
+    <item>
+      <title>hexo 搭建 github pages  问题</title>
+      <link>https://zhishuo.info/post/blog_hugo/hexo-%E6%90%AD%E5%BB%BA-github-pages-%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Sat, 31 May 2014 18:45:03 +0000</pubDate>
+      
+      <guid>https://zhishuo.info/post/blog_hugo/hexo-%E6%90%AD%E5%BB%BA-github-pages-%E9%97%AE%E9%A2%98/</guid>
+      <description>&lt;p&gt;由于自己想搭建一个免费的博客，所以找到了万能的github，但在搭建的过程中遇到了几个小问题，所以记下来
+基本搭建的方法都是参考于&lt;a href=&#34;http://ibruce.info/2013/11/22/hexo-your-blog/&#34;&gt;利用github搭建博客&lt;/a&gt;
+这个博主已经写的很全了，搭建的过程就不一一提了说下遇到的问题
+1.  hexo上传后博客还是官方的
+    建立了github pages的项目，并且使用了官方的建立建好了一个博客，官方默认会在master分支上开出一个gh-pages分支，然后查了官网资料说所有的内容都是显示gh-pages分支上的，但是我用hexo却传不到gh-pages分支上，并且传到了master分支内容也不会显示，后来找到原因是因为我建立的项目名字不是以#你的github帐户.github.io#命名的，所以会使hexo的上传程序传到master分支上也不会起作用，把项目名修改之后就可以了。
+
+2.  添加多说的问题
+  在官网注册后，复制了多说代码，按&lt;a href=&#34;http://www.leejianyang.com/2014/05/25/duoshuo_tutorial/&#34;&gt;教程&lt;/a&gt;做完之后发现多说模块不显示，所以查看了comment.ejs源代码
+            &amp;lt;% if (config.disqus_shortname &amp;amp;&amp;amp; page.comments){ %&amp;gt;
+  这里是2个判断，把config.disqus_shortname &amp;amp;&amp;amp; 删掉之后，就可以正常使用了。&lt;/p&gt;</description>
     </item>
     
   </channel>

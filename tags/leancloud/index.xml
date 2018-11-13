@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>leancloud on Even - A super concise theme for Hugo</title>
-    <link>http://localhost:1313/tags/leancloud/</link>
-    <description>Recent content in leancloud on Even - A super concise theme for Hugo</description>
+    <title>leancloud on 代码狗 - 还是写代码能让人幸福</title>
+    <link>https://zhishuo.info/tags/leancloud/</link>
+    <description>Recent content in leancloud on 代码狗 - 还是写代码能让人幸福</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh-cn</language>
     <lastBuildDate>Thu, 10 Nov 2016 20:51:47 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/leancloud/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zhishuo.info/tags/leancloud/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>hexo next主题添加LeanCloud统计功能</title>
-      <link>http://localhost:1313/post/hexo-next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0leancloud%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD/</link>
+      <link>https://zhishuo.info/post/blog_hugo/hexo-next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0leancloud%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD/</link>
       <pubDate>Thu, 10 Nov 2016 20:51:47 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/hexo-next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0leancloud%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD/</guid>
+      <guid>https://zhishuo.info/post/blog_hugo/hexo-next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0leancloud%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD/</guid>
       <description>遇到的问题 网上能查到很多next主题添加LeanCloud主题的方法，但我看都是说在站点的_config.yml中添加 1 2 3 4 leancloud_visitors: enable: true app_id: appid app_key: key</description>
     </item>
     
