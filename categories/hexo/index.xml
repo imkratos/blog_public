@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hexo on Even - A super concise theme for Hugo</title>
+    <link>http://localhost:1313/categories/hexo/</link>
+    <description>Recent content in hexo on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 26 Nov 2016 17:19:09 +0000</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/categories/hexo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>hexo博客主动推送到百度站长平台</title>
+      <link>http://localhost:1313/post/hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E5%8A%A8%E6%8E%A8%E9%80%81%E5%88%B0%E7%99%BE%E5%BA%A6%E7%AB%99%E9%95%BF%E5%B9%B3%E5%8F%B0/</link>
+      <pubDate>Sat, 26 Nov 2016 17:19:09 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E5%8A%A8%E6%8E%A8%E9%80%81%E5%88%B0%E7%99%BE%E5%BA%A6%E7%AB%99%E9%95%BF%E5%B9%B3%E5%8F%B0/</guid>
+      <description>&lt;h4 id=&#34;推送百度站长平台&#34;&gt;推送百度站长平台&lt;/h4&gt;
+
+&lt;p&gt;百度站长平台有几种方式提交自己的链接
+1. 主动推送(实时)
+2. 自动推送
+3. sitemap&lt;/p&gt;
+
+&lt;p&gt;或者自己手工提交，这里主要说以上三种方式。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>hexo博客next主题修改静态资源为CDN</title>
+      <link>http://localhost:1313/post/hexo%E5%8D%9A%E5%AE%A2next%E4%B8%BB%E9%A2%98%E4%BF%AE%E6%94%B9%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E4%B8%BAcdn/</link>
+      <pubDate>Tue, 15 Nov 2016 23:55:21 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/hexo%E5%8D%9A%E5%AE%A2next%E4%B8%BB%E9%A2%98%E4%BF%AE%E6%94%B9%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E4%B8%BAcdn/</guid>
+      <description>&lt;h2 id=&#34;问题&#34;&gt;问题&lt;/h2&gt;
+
+&lt;p&gt;博主最近看到博客打开速度非常慢，点开chrome的开发者工具查看是由于css,js,图片加载太慢，故&lt;code&gt;css,js&lt;/code&gt;换成了国内的cdn，图片换成了&lt;a href=&#34;http://www.qiniu.com/&#34;&gt;七牛云&lt;/a&gt;。
+打开主题配置文件&lt;code&gt;_config.yml&lt;/code&gt;以下为修改方式:
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>hexo next主题添加LeanCloud统计功能</title>
+      <link>http://localhost:1313/post/hexo-next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0leancloud%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD/</link>
+      <pubDate>Thu, 10 Nov 2016 20:51:47 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/hexo-next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0leancloud%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD/</guid>
+      <description>遇到的问题 网上能查到很多next主题添加LeanCloud主题的方法，但我看都是说在站点的_config.yml中添加 1 2 3 4 leancloud_visitors: enable: true app_id: appid app_key: key</description>
+    </item>
+    
+    <item>
+      <title>使用hexo生成博客在github js css 404解决方案</title>
+      <link>http://localhost:1313/post/%E4%BD%BF%E7%94%A8hexo%E7%94%9F%E6%88%90%E5%8D%9A%E5%AE%A2%E5%9C%A8github-js-css-404%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
+      <pubDate>Fri, 04 Nov 2016 13:32:58 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/%E4%BD%BF%E7%94%A8hexo%E7%94%9F%E6%88%90%E5%8D%9A%E5%AE%A2%E5%9C%A8github-js-css-404%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid>
+      <description>问题 博主最近又开始写博客了，发现使用hexo next 主题，上传到github上之后，所有的vendors文件夹下的资源访问404，博主查了一些资料</description>
+    </item>
+    
+  </channel>
+</rss>

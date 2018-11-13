@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cdn on Even - A super concise theme for Hugo</title>
+    <link>http://localhost:1313/tags/cdn/</link>
+    <description>Recent content in cdn on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 15 Nov 2016 23:55:21 +0000</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/tags/cdn/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>hexo博客next主题修改静态资源为CDN</title>
+      <link>http://localhost:1313/post/hexo%E5%8D%9A%E5%AE%A2next%E4%B8%BB%E9%A2%98%E4%BF%AE%E6%94%B9%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E4%B8%BAcdn/</link>
+      <pubDate>Tue, 15 Nov 2016 23:55:21 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/hexo%E5%8D%9A%E5%AE%A2next%E4%B8%BB%E9%A2%98%E4%BF%AE%E6%94%B9%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E4%B8%BAcdn/</guid>
+      <description>&lt;h2 id=&#34;问题&#34;&gt;问题&lt;/h2&gt;
+
+&lt;p&gt;博主最近看到博客打开速度非常慢，点开chrome的开发者工具查看是由于css,js,图片加载太慢，故&lt;code&gt;css,js&lt;/code&gt;换成了国内的cdn，图片换成了&lt;a href=&#34;http://www.qiniu.com/&#34;&gt;七牛云&lt;/a&gt;。
+打开主题配置文件&lt;code&gt;_config.yml&lt;/code&gt;以下为修改方式:
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>百度站长 on Even - A super concise theme for Hugo</title>
+    <link>http://localhost:1313/tags/%E7%99%BE%E5%BA%A6%E7%AB%99%E9%95%BF/</link>
+    <description>Recent content in 百度站长 on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 26 Nov 2016 17:19:09 +0000</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/tags/%E7%99%BE%E5%BA%A6%E7%AB%99%E9%95%BF/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>hexo博客主动推送到百度站长平台</title>
+      <link>http://localhost:1313/post/hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E5%8A%A8%E6%8E%A8%E9%80%81%E5%88%B0%E7%99%BE%E5%BA%A6%E7%AB%99%E9%95%BF%E5%B9%B3%E5%8F%B0/</link>
+      <pubDate>Sat, 26 Nov 2016 17:19:09 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E5%8A%A8%E6%8E%A8%E9%80%81%E5%88%B0%E7%99%BE%E5%BA%A6%E7%AB%99%E9%95%BF%E5%B9%B3%E5%8F%B0/</guid>
+      <description>&lt;h4 id=&#34;推送百度站长平台&#34;&gt;推送百度站长平台&lt;/h4&gt;
+
+&lt;p&gt;百度站长平台有几种方式提交自己的链接
+1. 主动推送(实时)
+2. 自动推送
+3. sitemap&lt;/p&gt;
+
+&lt;p&gt;或者自己手工提交，这里主要说以上三种方式。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="olOwOlo" /><meta name="description" content="Hugo theme even example site." /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.50 with even 4.0.0" />
+
+
+<link rel="canonical" href="http://localhost:1313/" />
+  <link href="http://localhost:1313/index.xml" rel="alternate" type="application/rss+xml" title="Even - A super concise theme for Hugo" />
+  <link href="http://localhost:1313/index.xml" rel="feed" type="application/rss+xml" title="Even - A super concise theme for Hugo" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.93844dae.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Even - A super concise theme for Hugo" />
+<meta property="og:description" content="Hugo theme even example site." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://localhost:1313/" />
+<meta property="og:updated_time" content="2016-11-12T15:39:10&#43;00:00"/>
+
+<meta itemprop="name" content="Even - A super concise theme for Hugo">
+<meta itemprop="description" content="Hugo theme even example site.">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Even - A super concise theme for Hugo"/>
+<meta name="twitter:description" content="Hugo theme even example site."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/jdk%E6%BA%90%E7%A0%81%E4%B9%8Bhashmap/">JDK源码之HashMap</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2016-11-12 </span>
+      <div class="post-category">
+          <a href="/categories/java/"> java </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <h4 id="什么是hashmap">什么是HashMap</h4>
+
+<p>HashMap是一个可以提供O(1)时间复杂度的数据结构，由数组和链表数据结构组成。在对存入的key进行hash之后，然后用hash值在数组上确定一个位置，把value对象以Node节点形式放入到数组的链表当中。</p>
+
+<p>jdk1.8之后对此做了优化，因为如果发生了数据倾斜，可能会使数组某个下标的Node链表非常长，因为链表查询起来比较慢，所以1.8之后修改了，当Node链表长度大于8时，会把该下标位置的链表数据结构修改为红黑树的结构来保证查询的速度。当数据长度小于8时，会再修改为链表。</p>
+
+<h4 id="使用场景">使用场景</h4>
+
+<p>个人理解使用场景应该是在不需要复杂的查询，只需要一个Key对应一个Value，写入少的场景。因为像HashMap，ArrayList这种数据结构都提供了自动扩容的功能，像HashMap的负载因子是0.75，也就是当数组中75%的位置都有值以后会进行扩容。每次扩容的时候都涉及到每个数据的rehash和数组的复制，所以当写入数据量非常大的时候，会不断的进行rehash和复制，有可能会造成CPU占用率非常高(这只是个人平时学习的理解，如果有不对之处请大家指正)。</p>
+
+<p>所以个人感觉HashMap的使用场景也是读多写少的场景，可以提供很快速度的读，写入的速度也可以，但如果提前知道Map里要放入多少数据，最好在new对象的时候，就手动指定出长度，这样可以避免rehash，从来变相提高使用效率。</p>
+
+<h4 id="源码实现-jdk1-8版本">源码实现 jdk1.8版本</h4>
+
+<p><strong>以下的代码都是代码在上面，解释在下面。</strong></p>
+
+<h5 id="变量声明">变量声明</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java">	 <span class="cm">/**
+</span><span class="cm">     * The default initial capacity - MUST be a power of two.
+</span><span class="cm">     */</span>
+    <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">DEFAULT_INITIAL_CAPACITY</span> <span class="o">=</span> <span class="n">1</span> <span class="o">&lt;&lt;</span> <span class="n">4</span><span class="o">;</span> <span class="o">//</span> <span class="n">aka</span> <span class="n">16</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>这个值是HashMap默认初始化的长度，也就是16长。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java">	<span class="cm">/**
+</span><span class="cm">     * The maximum capacity, used if a higher value is implicitly specified
+</span><span class="cm">     * by either of the constructors with arguments.
+</span><span class="cm">     * MUST be a power of two &lt;= 1&lt;&lt;30.
+</span><span class="cm">     */</span>
+    <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">MAXIMUM_CAPACITY</span> <span class="o">=</span> <span class="n">1</span> <span class="o">&lt;&lt;</span> <span class="n">30</span><span class="o">;</span> <span class="o">//</span><span class="n">1073741824</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>这里按注释看，应该是HashMap支持的最大长度，如果超过这个值，则使用这个值。</p>
+
+<p></p>
+    </div>
+    <div class="read-more">
+      <a href="/post/jdk%E6%BA%90%E7%A0%81%E4%B9%8Bhashmap/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/jdk%E6%BA%90%E7%A0%81%E4%B9%8Bcopyonwritearraylist/">JDK源码之CopyOnWriteArrayList</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2016-11-10 </span>
+      <div class="post-category">
+          <a href="/categories/java/"> java </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <h4 id="什么是copyonwritearraylist">什么是CopyOnWriteArrayList</h4>
+
+<p>CopyOnWriteArrayList是一个线程安全的List，和它相同的还有这几个,Vectory,SynchronizedList。
+它们都是实现了List接口的线程安全类。</p>
+
+<p>CopyOnWriteArrayList使用的是一种写时复制的算法，也就是说在执行add方法的时候，并不像传统的ArrayList一样在当前数组直接操作，
+而是在执行add方法的时候，会把原来的数组复制并且长度+1，然后把新值设置到新的数组中，然后把新数组设置为当前使用状态，由于数组是<code>volatile</code>修饰的，所以JVM会自动来保证数组的可见性。</p>
+
+<p>这样使此List在读取时可以不用加锁，提高读取效率，但是在添加的时候效率会很低下。所以我感觉CopyOnWriteArrayList的使用场景就是读多写少的场景，甚至在尽可能的情况下，不去写。这样才能发挥此数据结构的最大优点。
+</p>
+    </div>
+    <div class="read-more">
+      <a href="/post/jdk%E6%BA%90%E7%A0%81%E4%B9%8Bcopyonwritearraylist/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/hexo-next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0leancloud%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD/">hexo next主题添加LeanCloud统计功能</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2016-11-10 </span>
+      <div class="post-category">
+          <a href="/categories/hexo/"> hexo </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      遇到的问题 网上能查到很多next主题添加LeanCloud主题的方法，但我看都是说在站点的_config.yml中添加 1 2 3 4 leancloud_visitors: enable: true app_id: appid app_key: key
+    </div>
+    <div class="read-more">
+      <a href="/post/hexo-next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0leancloud%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/mac%E4%B8%8B%E4%BD%BF%E7%94%A8springli%E5%88%9B%E5%BB%BAspringboot%E5%BA%94%E7%94%A8/">mac下使用springli创建springboot应用</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2016-11-04 </span>
+      <div class="post-category">
+          <a href="/categories/java/"> java </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      环境准备 生成springboot有以下几种方式 1. maven 2. gradle 3. springli 4. spring官网可以点击生成脚手架 spring官网介绍说springli是最快的
+    </div>
+    <div class="read-more">
+      <a href="/post/mac%E4%B8%8B%E4%BD%BF%E7%94%A8springli%E5%88%9B%E5%BB%BAspringboot%E5%BA%94%E7%94%A8/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/%E4%BD%BF%E7%94%A8hexo%E7%94%9F%E6%88%90%E5%8D%9A%E5%AE%A2%E5%9C%A8github-js-css-404%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">使用hexo生成博客在github js css 404解决方案</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2016-11-04 </span>
+      <div class="post-category">
+          <a href="/categories/hexo/"> hexo </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      问题 博主最近又开始写博客了，发现使用hexo next 主题，上传到github上之后，所有的vendors文件夹下的资源访问404，博主查了一些资料
+    </div>
+    <div class="read-more">
+      <a href="/post/%E4%BD%BF%E7%94%A8hexo%E7%94%9F%E6%88%90%E5%8D%9A%E5%AE%A2%E5%9C%A8github-js-css-404%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
+    </section>
+  
+  <nav class="pagination">
+    <a class="prev" href="/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text">Prev</span>
+      </a>
+    <a class="next" href="/page/3/">
+        <span class="next-text">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+  </nav>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.ece58db6.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

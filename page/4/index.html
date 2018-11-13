@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="olOwOlo" /><meta name="description" content="Hugo theme even example site." /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.50 with even 4.0.0" />
+
+
+<link rel="canonical" href="http://localhost:1313/" />
+  <link href="http://localhost:1313/index.xml" rel="alternate" type="application/rss+xml" title="Even - A super concise theme for Hugo" />
+  <link href="http://localhost:1313/index.xml" rel="feed" type="application/rss+xml" title="Even - A super concise theme for Hugo" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.93844dae.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Even - A super concise theme for Hugo" />
+<meta property="og:description" content="Hugo theme even example site." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://localhost:1313/" />
+
+<meta itemprop="name" content="Even - A super concise theme for Hugo">
+<meta itemprop="description" content="Hugo theme even example site.">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Even - A super concise theme for Hugo"/>
+<meta name="twitter:description" content="Hugo theme even example site."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/%E6%A0%91%E8%8E%93%E6%B4%BEntp%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5%E9%97%AE%E9%A2%98/"></a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 0001-01-01 </span>
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      title: &lsquo;树莓派ntp时间同步问题&rsquo; date: 2015-11-30 22:48:37 tags: [树莓派,ntp同步]
+categories: [树莓派] 今天刚到手树莓派，看了下时间，于是上网搜了下时间同步的问题。 然而我按照网上修改的同步服务器并不能解决问题，于是自己试着改了一下。
+前提：你要选择正确了时区，运行sudo raspi-config 选择第4项，回车，继续选择第2个，回车，然后选择Aisa，回车，再次选择重庆或者上海，这样时区就调整好了。 网上大部分都说在/etc/ntpd.conf 下
+server 0.debain.pool.ntp.org iburst
+server 1.debain.pool.ntp.org iburst
+server 2.debain.pool.ntp.org iburst
+server 3.debain.pool.ntp.org iburst
+调整服务器为server asia.pool.ntp.org iburst，我自己试了并不可以，于是我参考了一下我的Mac，用了苹果的时间同步服务器，最终修改为server time.apple.com iburst然后重启ntp服务 sudo service ntp restart即可。
+    </div>
+    <div class="read-more">
+      <a href="/post/%E6%A0%91%E8%8E%93%E6%B4%BEntp%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5%E9%97%AE%E9%A2%98/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/%E8%AF%BBactivemq%E6%BA%90%E7%A0%81%E4%B8%80/"></a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 0001-01-01 </span>
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+       title: 读activeMQ源码(一) date: 2015-12-09 00:54:49 tags: [java,activemq]
+categories: [java] 最近的学习到了消息的阶段，查了下网上的资料，并没有很多具体介绍某一个消息中间件的源码是如何实现，帮自己下了源码想分析下去，希望能坚持。
+源码GIT下载地址
+下载完之后如果要导入eclipse 执行mvn eclipse:eclipse 或者导入IDEA mvn idea:idea
+说下个人对rpc和消息的理解:
+ 这2种方式从架构上就是不同的，rpc一般都是同步的，消息都是异步的，用在不同的场景上。  
+    </div>
+    <div class="read-more">
+      <a href="/post/%E8%AF%BBactivemq%E6%BA%90%E7%A0%81%E4%B8%80/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/%E8%AF%BBspring%E6%BA%90%E7%A0%81%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90%E4%BA%8C/"></a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 0001-01-01 </span>
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>title: &lsquo;读spring源码深度解析(二)&rsquo;
+date: 2016-03-09 17:16:21
+tags: [spring,spring源码]</p>
+
+<h2 id="categories-java">categories: [java]</h2>
+
+<p><strong><em>不明白</em></strong>
+<code>DefaultListableBeanFactory.java</code>中使用了<code>AccessController.doPrivileged()</code>方法，个人理解此方法好像是以当前上下文执行一些代码。
+<code>javaUtilOptionalClass</code>这个属性，是用了JDK8的<code>java.util.Optional</code>,此类是用来避免在Java中出现各种null的问题,但不知道为什么是写在了静态代码块中，而且是以动态加载的方式来加载的。</p>
+
+<p><strong><em>初始类</em></strong>
+从<code>DefaultListableBeanFactory.java</code>类的getBean()中，开始对整个工厂类进分析。</p>
+
+<p><img src="http://ogflhfadi.bkt.clouddn.com/DefaultListableBeanFactory.png" alt="类的关系调用图" /></p>
+
+<p>静态导入，如果你多次用到某个工具类的静态方法，可以使用静态导入，这样使代码更整洁美观。
+<code>SimpleAliasRegistry.java</code>这个类实现了对Alias的一些操作。
+<code>BeanFactory.java</code>接口定义一些对Bean的基本操作。
+<code>DefaultSingletonBeanRegistry.java</code>对spring对Bean的一些操作做了各种封装，创建，消毁，依赖等。
+<code>AbstractAutowireCapableBeanFactory.java</code>对<code>AutowireCapableBeanFactory</code>定义的方法进行了实现，此类
+<code>XmlBeanDefinitionReader.java</code>实现了用xml解析资源文件，并且实现了<code>DefaultListableBeanFactory.java</code>类</p>
+
+<p></p>
+    </div>
+    <div class="read-more">
+      <a href="/post/%E8%AF%BBspring%E6%BA%90%E7%A0%81%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90%E4%BA%8C/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/%E8%AF%BBspring%E6%BA%90%E7%A0%81%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90/"></a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 0001-01-01 </span>
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+       title: &lsquo;读spring源码深度解析&rsquo; date: 2015-11-12 11:35:44 tags: [spring,spring源码]
+categories: [java] 工作也有几年了，以前也尝试过想要读spring源码，但由于前几年没有参考资料，所以很难去理解，最近发现一本spring源码深度解析，怀着试试看的心情，踏上了源码之路。
+记录一下自己遇到的问题，初次读完之后感觉到了spring的强大之处，处处都是设计模式，把代码拆的很分散，但理解上就很难了。
+ 源码下载，spring最新的git源码地址为spring源码 由于spring3.X以后就是使用gradle构建了，所以还需要安装gradle，Mac OS 可以使用HomeBrew brew install gradle 即可 安装好gradle以后，可以在想要查看的spring项目下执行gradle eclipse 生成eclipse的配置文件 最后在Eclipse-&gt;import-&gt;existing Eclipse projects进行导入就可以了 书中有一个查看类实现的接口图，一开始不知道在哪使用，后来发现对着想要查看的类右击，出现选项菜单，点击-&gt;Open Type Hierarchy 即可，默认是显示的子类实现，然后点击上方小图标show the supertype Hierarchy即可 书中作者看到了哪个类中没有做明确提示，如果找不到需要自行搜索，我用的STS，commond+shift+l 可按关键字搜索  
+    </div>
+    <div class="read-more">
+      <a href="/post/%E8%AF%BBspring%E6%BA%90%E7%A0%81%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/%E9%98%85%E8%AF%BBactivemq%E6%BA%90%E7%A0%81%E6%80%BB%E7%BB%93/"></a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 0001-01-01 </span>
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>title: 阅读ActiveMQ源码总结
+date: 2016-01-07 22:06:48
+tags: [java,ActiveMQ]</p>
+
+<h2 id="categories-java">categories: [java]</h2>
+
+<h3 id="准备工作">准备工作</h3>
+
+<ul>
+<li>下载源码<code>git clone https://github.com/apache/activemq.git</code></li>
+<li>使用maven编译源码并且下载依赖<code>mvn clean install</code></li>
+<li>导入到开发工具eclipse<code>mvn eclipse:eclipse</code> 或者idea <code>mvn idea:idea</code></li>
+<li>默认会去maven中央仓库下载jar包，如果下载速度慢可以翻墙或者改成开源中国的镜像仓库
+<code>xml
+&lt;mirrors&gt;
+&lt;mirror&gt;
+  &lt;id&gt;CN&lt;/id&gt;
+  &lt;name&gt;OSChina Central&lt;/name&gt;
+  &lt;url&gt;http://maven.oschina.net/content/groups/public/&lt;/url&gt;
+  &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;
+&lt;/mirror&gt;
+&lt;/mirrors&gt;
+</code></li>
+</ul>
+
+<p></p>
+    </div>
+    <div class="read-more">
+      <a href="/post/%E9%98%85%E8%AF%BBactivemq%E6%BA%90%E7%A0%81%E6%80%BB%E7%BB%93/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
+    </section>
+  
+  <nav class="pagination">
+    <a class="prev" href="/page/3/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text">Prev</span>
+      </a>
+    
+  </nav>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.ece58db6.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

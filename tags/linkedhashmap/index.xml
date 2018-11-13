@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LinkedHashMap on Even - A super concise theme for Hugo</title>
+    <link>http://localhost:1313/tags/linkedhashmap/</link>
+    <description>Recent content in LinkedHashMap on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 04 Dec 2016 13:18:58 +0000</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/tags/linkedhashmap/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>JDK源码之LinkedHashMap</title>
+      <link>http://localhost:1313/post/jdk%E6%BA%90%E7%A0%81%E4%B9%8Blinkedhashmap/</link>
+      <pubDate>Sun, 04 Dec 2016 13:18:58 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/jdk%E6%BA%90%E7%A0%81%E4%B9%8Blinkedhashmap/</guid>
+      <description>LinkedHashMap使用场景 我们都知道平常使用的HashMap是存放无顺序的，但当我们需要有顺序的HashMap的时候呢？所以JDK提</description>
+    </item>
+    
+  </channel>
+</rss>
